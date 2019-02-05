@@ -7,6 +7,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
+const bodyParser = require('body-parser');
 
 var index = require('./routes/home');
 // Example route
@@ -28,6 +29,11 @@ app.use(express.cookieParser('IxD secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
+// app.set('view engine', 'ejs')
+
 
 // development only
 if ('development' == app.get('env')) {
