@@ -28,7 +28,37 @@
 			<form>
 		  		<input type="text" placeholder="Search.." name="search" class="searchbar">
 		  		<!-- <button type="submit"><i class="fa fa-search"></i></button> -->
-		  		<button type="submit"><i class="fa fa-filter"></i></button>
+		  		<button type="submit" class="btn btn-light dropdown-toggle" data-toggle="dropdown"><i class="fa fa-filter"></i></button>
+		  		<div class="dropdown-menu">
+					    <form>
+						  <label for="customRange">Distance</label>
+						  <input type="range" class="custom-range" id="customRange" name="distance">
+						</form>
+					    <form>
+						  <label for="customRange">Sound</label>
+						  <input type="range" class="custom-range" id="customRange" name="sound">
+						</form>
+						<form>
+						  <label for="customRange">Group Size</label>
+						  <input type="range" class="custom-range" id="customRange" name="group-size">
+						</form>
+						<form>
+						  <label for="customRange">Price</label>
+						  <input type="range" class="custom-range" id="customRange" name="price">
+						</form>
+						<form>
+						  <div class="custom-control custom-radio">
+						    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
+						    <label class="custom-control-label" for="customRadio">Wifi</label>
+						  </div> 
+						</form>
+						<form>
+						  <div class="custom-control custom-radio">
+						    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
+						    <label class="custom-control-label" for="customRadio">24 Hour</label>
+						  </div> 
+						</form>
+				  	</div>
 			</form>
 		</div>
 
@@ -41,12 +71,7 @@
 				<div class="col"></div>
 				<div class="col"></div>
 				<div class="col">
-					<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-plus"></i></button>
-					<div class="dropdown-menu">
-					    <a class="dropdown-item" href="#">Link 1</a>
-					    <a class="dropdown-item" href="#">Link 2</a>
-					    <a class="dropdown-item" href="#">Link 3</a>
-				  	</div>
+				 	<a href="/add" class="btn btn-light" role="button"><i class="fa fa-plus"></i></a>
 				</div>
 			</div>
 			<div id="map"></div>
