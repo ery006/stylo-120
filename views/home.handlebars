@@ -32,17 +32,35 @@
 			</form>
 		</div>
 
-		<!-- Map -->
-		<div id="map"></div>
+		<!-- Plus button and Map -->
+		<div class="container">
+			<div class="row">
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col">
+					<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-plus"></i></button>
+					<div class="dropdown-menu">
+					    <a class="dropdown-item" href="#">Link 1</a>
+					    <a class="dropdown-item" href="#">Link 2</a>
+					    <a class="dropdown-item" href="#">Link 3</a>
+				  	</div>
+				</div>
+			</div>
+			<div id="map"></div>
+		</div>
     
 
 		<!-- Tabs -->
 		<div class="container" style="text-align: center">
 			<div class="btn-group btn-group-lg">
-			  <button type="button" class="btn btn-light btn-lg">Home</button>
-			  <button type="button" class="btn btn-light btn-lg">Favorite</button>
-			  <button type="button" class="btn btn-light btn-lg">Study Groups</button>
-			  <button type="button" class="btn btn-light btn-lg">Profile</button>
+			  <button type="button" onclick="initMap()" class="btn btn-light btn-lg">Home</button>
+			  <button type="button" onclick="favoriteMap()" class="btn btn-light btn-lg">Favorite</button>
+			  <button type="button" onclick="studyGroupsMap()" class="btn btn-light btn-lg">Study Groups</button>
+			  <a href="/profile" class="btn btn-light btn-lg" role="button">Profile</a>
+			  <!-- <button type="button" onclick="profilePage()" class="btn btn-light btn-lg">Profile</button> -->
 			</div>
 		</div>
 	</body>
