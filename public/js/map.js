@@ -47,6 +47,15 @@ function initMap() {
 	//     label: labels[i % labels.length]
 	//   });
 	// });
+
+	var image = "https://img.icons8.com/color/26/000000/filled-star.png";
+	var currrentLoc = new google.maps.Marker({
+          position: latlng,
+          map: map,
+					icon: image
+    });
+
+
 	var marker1 = new google.maps.Marker({
           position: loc1,
           map: map,
@@ -65,6 +74,37 @@ function initMap() {
           label: 'C'
     });
 
+		var content1String = '<div id="content">'+
+		            '<div id="siteNotice">'+
+		            '</div>'+
+		            '<h4 id="firstHeading" class="firstHeading">Location 1</h4>'+
+		            '<div id="bodyContent">'+
+		            '<b>Description</b>' +
+								'</div>' +
+								'<div>' +
+		            'Hours: Mon-Sat 8am-10pm' +
+								'</div>' +
+								'<div>' +
+		            '123 Address St. La Jolla, CA' +
+								'</div>' +
+								'<div>' +
+		            'Open'+
+								'</div>' +
+								'<div>' +
+		            '20 Available Seats' +
+								'</div>' +
+								'<div>' +
+		            '<a href="https://maps.google.com">' +
+		            'Directions</a>'
+								'</div>' +
+		            '</div>'
+								'</div>';
+		var infowindow = new google.maps.InfoWindow({
+		content: content1String
+			 });
+		marker1.addListener('click', function() {
+          infowindow.open(map, marker1);
+        });
 	// Add a marker clusterer to manage the markers.
 	// var markerCluster = new MarkerClusterer(map, markers,
 	//     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
