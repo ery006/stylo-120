@@ -1,0 +1,32 @@
+{
+	"locations": [
+		{
+			"lat": "32.876616",
+			"long": "-117.231710",
+			"name": "Location 1",
+			"description": "Location 1 is great for all things!",
+			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+		},
+		{
+			"lat": "32.868518",
+			"long": "-117.239889",
+			"name": "Location 2",
+			"description": "Location 2 is great for all things!",
+			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg"			
+		},
+		{
+			"lat": "32.868718",
+			"long": "-116.739889",
+			"name": "Location 3",
+			"description": "Location 3 is great for all things!",
+			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"			
+		},
+		{
+			"lat": "32.868518",
+			"long": "-116.239889",
+			"name": "Location 4",
+			"description": "Location 4 is great for all things!",
+			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg"			
+		}
+	]
+}
