@@ -24,6 +24,8 @@
 // 	{lat: -43.999792, lng: 170.463352}
 // ]
 
+// var locs = require('../locations.json');
+
 function initMap() {
 	var latlng = new google.maps.LatLng(32.877281, -117.234929);
 	var loc1 = new google.maps.LatLng(32.876616, -117.231710);
@@ -36,6 +38,11 @@ function initMap() {
 
 	// Create an array of alphabetical characters used to label the markers.
 	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	
+	// var allLocations
+	// for(var loc in locs.locations) {
+	// 	console.log(loc);
+	// }
 
 	// // Add some markers to the map.
 	// // Note: The code uses the JavaScript Array.prototype.map() method to
