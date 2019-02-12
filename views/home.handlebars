@@ -25,34 +25,39 @@
 		</div>
 
 		<!-- Search bar -->
-		<div class="container" style="text-align: center">
-			<form>
-		  		<input type="text" placeholder="Search.." name="search" class="searchbar">
-		  		<!-- <button type="submit"><i class="fa fa-search"></i></button> -->
-		  		<button type="submit" class="btn btn-light dropdown-toggle" data-toggle="dropdown"><i class="fa fa-filter"></i></button>
-		  		<div class="dropdown-menu">
+		<div class="container">
+			<div class="row">
+				<form>
+			  		<input type="text" placeholder="Search.." name="search" class="searchbar">
+			  	</form>
+		  		<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown"><i class="fa fa-filter"></i></button>
+		  		<div class="dropdown-menu keep-open" id="myDropdown">
 		  				<label>Distance</label>
-		  				<div class="row">
+		  				<div class="row" id="dropOptions">
+		  					<radiogroup>
 		  					<input type="checkbox" name="filter" id="close" class='chk-btn'>
 							<label for='close'>~5mi</label>
 		  					<input type="checkbox" name="filter" id="normalDist" class='chk-btn'>
 							<label for='normalDist'>~10mi</label>
 							<input type="checkbox" name="filter" id="far" class='chk-btn'>
 							<label for='far'>~20mi</label>
+							</radiogroup>
 		  				</div>
 
 		  				<label>Sound</label>
-		  				<div class="row">
+		  				<div class="row" id="dropOptions">
+		  					<radiogroup>
 		  					<input type="checkbox" name="filter" id="quiet" class='chk-btn'>
 							<label for='quiet'>Quiet</label>
 							<input type="checkbox" name="filter" id="normalSound" class='chk-btn'>
-							<label for='noramlSound'>Normal?</label>
+							<label for='normalSound'>Little Noise</label>
 							<input type="checkbox" name="filter" id="loud" class='chk-btn'>
-							<label for='loud'>Background Noise</label>
+							<label for='loud'>Loud</label>
+							</radiogroup>
 		  				</div>
 
 		  				<label>Price</label>
-		  				<div class="row">
+		  				<div class="row" id="dropOptions">
 		  					<input type="checkbox" name="filter" id="free" class='chk-btn'>
 							<label for='free'>Free</label>
 							<input type="checkbox" name="filter" id="oneDollar" class='chk-btn'>
@@ -61,20 +66,11 @@
 							<label for='twoDollar'>$$</label>
 		  				</div>
 					    
-						  <div class="custom-control custom-radio">
-						    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
-						    <label class="custom-control-label" for="customRadio">Wifi</label>
-						  </div> 
-						</form>
-						<form>
-						  <div class="custom-control custom-radio">
-						    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
-						    <label class="custom-control-label" for="customRadio">24 Hour</label>
-						  </div> 
-						  <button type="button" onclick="favoriteMap()" class="btn btn-light"> Submit </button>
-						</form>
+						<input type="checkbox" name="filter" id="dropOptions"> Wifi<br>
+						<input type="checkbox" name="filter" id="dropOptions"> 24 Hour<br>
+						<button type="button" onclick="favoriteMap()" class="btn btn-light" id="dropSubmit"> Submit </button>
 				  	</div>
-			</form>
+				</div>
 		</div>
 
 		<!-- Plus button and Map -->

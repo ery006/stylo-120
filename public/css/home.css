@@ -12,9 +12,30 @@
 	/*float: right;*/
 }
 
+.searchbar {
+	width: 130px;
+}
+
+.row {
+	margin: auto;
+	max-width:250px
+}
+
 .infoWindowImage {
 	height: 100px;
 	width: 100px;
+}
+
+#myDropdown {
+	width: 300px;
+}
+
+#dropOptions {
+	margin-left: 10px;
+}
+
+#dropSubmit {
+	margin-left: 120px;
 }
 
 input.chk-btn {
@@ -30,11 +51,9 @@ input.chk-btn + label {
 }
 input.chk-btn:not(:checked) + label:hover {
   box-shadow: 0px 1px 3px;
-  
 }
 input.chk-btn + label:active,
 input.chk-btn:checked + label {
   box-shadow: 0px 0px 3px inset;
-  background: #8cc472;
-  
+  background: #ADD8E6;
 }

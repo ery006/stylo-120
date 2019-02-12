@@ -15,6 +15,13 @@ $.getJSON( "studyLocations.json", function( json ) {
     studyLocs = json;
 });
 
+$('.dropdown-toggle').on('click', function (e) {
+  $(this).next().toggle();
+});
+$('.dropdown-menu.keep-open').on('click', function (e) {
+  e.stopPropagation();
+});
+
 // $(function() {
 
 //   $('.dropdown-toggle').on('click', function(event) {
