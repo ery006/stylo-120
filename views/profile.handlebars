@@ -18,9 +18,21 @@
   </div>
 
 <!-- Profile Info -->
+	<!-- <div class="container text-center">
+		<div class="card" style="width: 18rem" class="mx-auto d-block">
+			<img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/1/13/Stick_figure.png" alt="profile">
+			<div class="card-body">
+				<h5 class="card-title">Person One</h5>
+    		<a href="/manage" class="btn btn-secondary">Account Settings</a>
+			</div>
+		</div>
+	</div> -->
+
   <div class="container text-center">
 		<div class="card">
-			<div class="card-body"><img src="https://upload.wikimedia.org/wikipedia/en/1/13/Stick_figure.png"></div>
+			<div class="card-body">
+				<img src="https://upload.wikimedia.org/wikipedia/en/1/13/Stick_figure.png" alt="profile">
+			</div>
 		</div>
     <h2>Person One</h2>
   </div>
@@ -28,19 +40,19 @@
 <!-- Content -->
   <div class="container">
     <h4>Username</h4>
-		<a href="/add">Manage Favorites</a>
+		<a href="/manage">Manage Favorites</a>
 		<div>
-			<a href="/add">Account Settings</a>
+			<a href="/account">Account Settings</a>
 		</div>
   </div>
 
 <!-- Logout -->
   <div class="container">
-    <button type="button">Logout</button>
+    <button type="button" href="/login">Logout</button>
   </div>
 
 <!-- Tabs -->
-<div class="container" style="text-align: center">
+<div class="container" style="text-align: center; position: fixed; bottom: 0">
 	<div class="btn-group btn-group-lg">
 		<a href="/" class="btn btn-light btn-lg" role="button">Home</a>
 		<a href="/" class="btn btn-light btn-lg" role="button">Favorite</a>

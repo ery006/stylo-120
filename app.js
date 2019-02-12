@@ -12,6 +12,8 @@ const bodyParser = require('body-parser');
 var index = require('./routes/home');
 var profile = require('./routes/profile');
 var add = require('./routes/add');
+var account = require('./routes/account');
+var manage = require('./routes/manage');
 // Example route
 // var user = require('./routes/user');
 
@@ -45,6 +47,8 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/profile', profile.view);
 app.get('/add', add.view);
+app.get('/account', account.view);
+app.get('/manage', manage.view);
 // Example route
 // app.get('/users', user.list);
 
