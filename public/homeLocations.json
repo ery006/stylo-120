@@ -1,0 +1,44 @@
+{
+	"locations": [
+		{
+			"lat": "32.876616",
+			"long": "-117.231710",
+			"name": "Location 1",
+			"description": "Location 1 is great for all things!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Address St. La Jolla, CA",
+			"seating": "20 Available seats.",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"			
+		},
+		{
+			"lat": "32.868518",
+			"long": "-117.239889",
+			"name": "Location 2",
+			"description": "Location 2 is great for all things!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Address St. La Jolla, CA",
+			"seating": "20 Available seats.",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"	
+		},
+		{
+			"lat": "32.875442",
+			"long": "-117.237017",
+			"name": "Location 3",
+			"description": "Location 3 is great for all things!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Address St. La Jolla, CA",
+			"seating": "20 Available seats.",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"				
+		},
+		{
+			"lat": "32.873855",
+			"long": "-117.240900",
+			"name": "Location 4",
+			"description": "Location 4 is great for all things!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Address St. La Jolla, CA",
+			"seating": "20 Available seats.",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"				
+		}
+	]
+}
