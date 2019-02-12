@@ -10,11 +10,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-		<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJdJ76C7tY7RfZpyaF3C5k4ysU_NkotzM&callback=initMap"></script>
+		<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJdJ76C7tY7RfZpyaF3C5k4ysU_NkotzM"></script>
 		<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
 	    </script>
 	    <script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js"></script>
 		<script type="text/javascript" src="/js/map.js"></script>
+
 	</head>
 
 	<body onload="initMap()">
@@ -30,23 +31,36 @@
 		  		<!-- <button type="submit"><i class="fa fa-search"></i></button> -->
 		  		<button type="submit" class="btn btn-light dropdown-toggle" data-toggle="dropdown"><i class="fa fa-filter"></i></button>
 		  		<div class="dropdown-menu">
-					    <form>
-						  <label for="customRange">Distance</label>
-						  <input type="range" class="custom-range" id="customRange" name="distance">
-						</form>
-					    <form>
-						  <label for="customRange">Sound</label>
-						  <input type="range" class="custom-range" id="customRange" name="sound">
-						</form>
-						<form>
-						  <label for="customRange">Group Size</label>
-						  <input type="range" class="custom-range" id="customRange" name="group-size">
-						</form>
-						<form>
-						  <label for="customRange">Price</label>
-						  <input type="range" class="custom-range" id="customRange" name="price">
-						</form>
-						<form>
+		  				<label>Distance</label>
+		  				<div class="row">
+		  					<input type="checkbox" name="filter" id="close" class='chk-btn'>
+							<label for='close'>~5mi</label>
+		  					<input type="checkbox" name="filter" id="normalDist" class='chk-btn'>
+							<label for='normalDist'>~10mi</label>
+							<input type="checkbox" name="filter" id="far" class='chk-btn'>
+							<label for='far'>~20mi</label>
+		  				</div>
+
+		  				<label>Sound</label>
+		  				<div class="row">
+		  					<input type="checkbox" name="filter" id="quiet" class='chk-btn'>
+							<label for='quiet'>Quiet</label>
+							<input type="checkbox" name="filter" id="normalSound" class='chk-btn'>
+							<label for='noramlSound'>Normal?</label>
+							<input type="checkbox" name="filter" id="loud" class='chk-btn'>
+							<label for='loud'>Background Noise</label>
+		  				</div>
+
+		  				<label>Price</label>
+		  				<div class="row">
+		  					<input type="checkbox" name="filter" id="free" class='chk-btn'>
+							<label for='free'>Free</label>
+							<input type="checkbox" name="filter" id="oneDollar" class='chk-btn'>
+							<label for='oneDollar'>$</label>
+							<input type="checkbox" name="filter" id="twoDollar" class='chk-btn'>
+							<label for='twoDollar'>$$</label>
+		  				</div>
+					    
 						  <div class="custom-control custom-radio">
 						    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
 						    <label class="custom-control-label" for="customRadio">Wifi</label>
@@ -57,6 +71,7 @@
 						    <input type="radio" class="custom-control-input" id="customRadio" name="example1" value="customEx">
 						    <label class="custom-control-label" for="customRadio">24 Hour</label>
 						  </div> 
+						  <button type="button" onclick="favoriteMap()" class="btn btn-light"> Submit </button>
 						</form>
 				  	</div>
 			</form>
