@@ -12,7 +12,7 @@ function initMap() {
 
 	// Create an array of alphabetical characters used to label the markers.
 	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-	
+
 	// var allLocations
 	// for(var loc in locs.locations) {
 	// 	console.log(loc);
@@ -164,6 +164,13 @@ function favoriteMap() {
 	// Create an array of alphabetical characters used to label the markers.
 	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
+	var image = "https://img.icons8.com/color/26/000000/filled-star.png";
+	var currrentLoc = new google.maps.Marker({
+					position: latlng,
+					map: map,
+					icon: image
+		});
+
 	var marker1 = new google.maps.Marker({
           position: loc1,
           map: map,
@@ -207,6 +214,14 @@ function studyGroupsMap() {
 	//     label: labels[i % labels.length]
 	//   });
 	// });
+
+	var image = "https://img.icons8.com/color/26/000000/filled-star.png";
+	var currrentLoc = new google.maps.Marker({
+					position: latlng,
+					map: map,
+					icon: image
+		});
+
 	var marker1 = new google.maps.Marker({
           position: loc1,
           map: map,
