@@ -69,12 +69,12 @@ function initMap() {
         	position: latlong,
         	map: map,
         	label: labels[i]
-    	}); 
+    	});
 
 		var contentString = '<div id="content">'+
 	            '<div id="siteNotice">'+
 	            '</div>'+
-	            '<h4 id="firstHeading" class="firstHeading">' + 
+	            '<h4 id="firstHeading" class="firstHeading">' +
 	            homeLocs.locations[i].name +
 	            '</h4>'+
 	            '<div id="bodyContent">'+
@@ -93,9 +93,9 @@ function initMap() {
 							'<div>' +
 	            '<p>' + homeLocs.locations[i].seating + '</p>' +
 							'</div>' +
-							'<div> <img class="infoWindowImage" src=' + 
+							'<div> <img class="infoWindowImage" src=' +
 							homeLocs.locations[i].imageURL + '>'
-							+ 
+							+
 	            '<br/><a href="https://maps.google.com">' +
 	            'Directions</a>'
 							'</div>' +
@@ -152,12 +152,12 @@ function favoriteMap() {
         	position: latlong,
         	map: map,
         	label: labels[i]
-    	}); 
+    	});
 
 		var contentString = '<div id="content">'+
 	            '<div id="siteNotice">'+
 	            '</div>'+
-	            '<h4 id="firstHeading" class="firstHeading">' + 
+	            '<h4 id="firstHeading" class="firstHeading">' +
 	            favLocs.locations[i].name +
 	            '</h4>'+
 	            '<div id="bodyContent">'+
@@ -176,9 +176,9 @@ function favoriteMap() {
 							'<div>' +
 	            '<p>' + favLocs.locations[i].seating + '</p>' +
 							'</div>' +
-							'<div> <img class="infoWindowImage" src=' + 
+							'<div> <img class="infoWindowImage" src=' +
 							favLocs.locations[i].imageURL + '>'
-							+ 
+							+
 	            '<br/><a href="https://maps.google.com">' +
 	            'Directions</a>'
 							'</div>' +
@@ -235,16 +235,19 @@ function studyGroupsMap() {
         	position: latlong,
         	map: map,
         	label: labels[i]
-    	}); 
+    	});
 
 		var contentString = '<div id="content">'+
 	            '<div id="siteNotice">'+
 	            '</div>'+
-	            '<h4 id="firstHeading" class="firstHeading">' + 
+	            '<h4 id="firstHeading" class="firstHeading">' +
 	            studyLocs.locations[i].name +
 	            '</h4>'+
 	            '<div id="bodyContent">'+
 	            '<b>Description</b>' +
+              '<div>' +
+	            '<p>' + studyLocs.locations[i].class + '</p>' +
+							'</div>' +
 	            '<p>' + studyLocs.locations[i].description + '</p>' +
 							'</div>' +
 							'<div>' +
@@ -259,9 +262,9 @@ function studyGroupsMap() {
 							'<div>' +
 	            '<p>' + studyLocs.locations[i].seating + '</p>' +
 							'</div>' +
-							'<div> <img class="infoWindowImage" src=' + 
+							'<div> <img class="infoWindowImage" src=' +
 							studyLocs.locations[i].imageURL + '>'
-							+ 
+							+
 	            '<br/><a href="https://maps.google.com">' +
 	            'Directions</a>'
 							'</div>' +
