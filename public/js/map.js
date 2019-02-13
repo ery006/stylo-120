@@ -15,30 +15,61 @@ $.getJSON( "studyLocations.json", function( json ) {
     studyLocs = json;
 });
 
-$('.dropdown-toggle').on('click', function (e) {
-  $(this).next().toggle();
-});
-$('.dropdown-menu.keep-open').on('click', function (e) {
-  e.stopPropagation();
-});
+// Dialog functions
+$( function() {
+	$( "#dialog" ).dialog({
+	  autoOpen: false,
+	  show: {
+	    effect: "blind",
+	    duration: 1000
+	  },
+	  hide: {
+	    effect: "explode",
+	    duration: 1000
+	  }
+	});
 
-// $(function() {
+	$( "#opener" ).on( "click", function() {
+	  $( "#dialog" ).dialog( "open" );
+	});
+} );
 
-//   $('.dropdown-toggle').on('click', function(event) {
-//     $('.dropdown-menu').slideToggle();
-//     event.stopPropagation();
-//   });
+$( function() {
+    $( 'input[type="radio"]' ).checkboxradio({
+      icon: false
+    });
+  } );
 
-//   $('.dropdown-menu').on('click', function(event) {
-//     event.stopPropagation();
-//   });
+// Slider distance
+$( function() {
+    $( "#slider-range-max-dist" ).slider({
+      range: "max",
+      min: 1,
+      max: 20,
+      value: 2,
+      slide: function( event, ui ) {
+        $( "#distance" ).val( ui.value + "mi" );
+      }
+    });
+    $( "#distance" ).val( $( "#slider-range-max-dist" ).slider( "value" ) );
+  } );
 
-//   $(window).on('click', function() {
-//     $('.dropdown-menu').slideUp();
-//   });
+// Slider price
+$( function() {
+    $( "#slider-range-max-price" ).slider({
+      range: "max",
+      min: 0,
+      max: 20,
+      value: 2,
+      slide: function( event, ui ) {
+        $( "#price" ).val( "$" + ui.value );
+      }
+    });
+    $( "#price" ).val( $( "#slider-range-max-price" ).slider( "value" ) );
+  } );
 
-// });
 
+// Home screen map
 function initMap() {
 	// Create an array of alphabetical characters used to label the markers.
 	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -204,6 +235,7 @@ function favoriteMap() {
 	    markers.push(marker);
 
 	}
+	 $( "#dialog" ).dialog( "close" );
 }
 
 function studyGroupsMap() {

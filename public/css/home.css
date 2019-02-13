@@ -26,8 +26,13 @@
 	width: 100px;
 }
 
-#myDropdown {
-	width: 300px;
+.mySlider {
+	margin-top: -15px;
+	margin-bottom: 10px;
+}
+
+.ui-widget .ui-widget {
+    font-size: 0.9em !important;
 }
 
 #dropOptions {
@@ -35,7 +40,7 @@
 }
 
 #dropSubmit {
-	margin-left: 120px;
+	margin-left: 100px;
 }
 
 input.chk-btn {
