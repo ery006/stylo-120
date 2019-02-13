@@ -9,7 +9,8 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 const bodyParser = require('body-parser');
 
-var index = require('./routes/home');
+var index = require('./routes/index');
+var home = require('./routes/home');
 var profile = require('./routes/profile');
 var add = require('./routes/add');
 var account = require('./routes/account');
@@ -45,6 +46,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
+app.get('/home', home.view);
 app.get('/profile', profile.view);
 app.get('/add', add.view);
 app.get('/account', account.view);
