@@ -14,6 +14,8 @@ var home = require('./routes/home');
 var profile = require('./routes/profile');
 var add = require('./routes/add');
 var account = require('./routes/account');
+var login = require('./routes/login');
+var signUp = require('./routes/signUp');
 var manage = require('./routes/manage');
 // Example route
 // var user = require('./routes/user');
@@ -51,6 +53,8 @@ app.get('/profile', profile.view);
 app.get('/add', add.view);
 app.get('/account', account.view);
 app.get('/manage', manage.view);
+app.get('/signUp', signUp.view);
+app.get('/login', login.view);
 // Example route
 // app.get('/users', user.list);
 
