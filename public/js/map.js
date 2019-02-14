@@ -102,6 +102,7 @@ function initMap() {
         	label: labels[i]
     	});
 
+
 		var contentString = '<div id="content">'+
 	            '<div id="siteNotice">'+
 	            '</div>'+
