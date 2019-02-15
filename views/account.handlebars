@@ -23,16 +23,136 @@
  		<br>
 
  			<!-- Content -->
-			<div>
+			<!-- <div>
 				<ul class="list-group list-group-flush">
-				  <li class="list-group-item"><a href="#">Change Password</a></li>
-				  <li class="list-group-item"><a href="#">Notifications</a></li>
-				  <li class="list-group-item"><a href="#">Location Settings</a></li>
-				  <li class="list-group-item"><a href="#">Privacy & Safety</a></li>
+
+				  <li class="list-group-item"><a href="/password" data-toggle="collapse" data-target="#demo">Change Password</a></li>
+					<div id="demo" class="collapse">
+						Lorem ipsum dolor text....
+					</div>
+
+				  <li class="list-group-item"><a href="/notifications">Notification Settings</a></li>
+				  <li class="list-group-item"><a href="/locationSetting">Location Settings</a></li>
+				  <li class="list-group-item"><a href="/privacy">Privacy & Safety</a></li>
 				</ul>
-				<br>
+				<br> -->
+
+<div class="panel-group" id="accordion">
+
+	<!-- Change Password -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        	Change Password</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+				<form>
+				  <div class="form-group">
+				    <label for="exampleFormControlInput1">Email</label>
+				    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+				  </div>
+					<div class="form-group">
+				    <label for="exampleFormControlInput2">Old Password</label>
+				    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Old Password">
+				  </div>
+					<div class="form-group">
+				    <label for="exampleFormControlInput2">New Password</label>
+				    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="New Password">
+				  </div>
+				  <div id="dialog" title="Form was submitted">
+					  <p>Your password has been successfully changed.</p>
+					</div>
+						<button id="opener" type="button" class="btn btn-secondary btn-sm">
+							Change
+						</button>
+				</form>
+			</div>
+    </div>
+  </div>
+
+	<!-- Notificaiton Settings -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        	Notification Settings</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+				<div id="dialog" title="Filters">
+				<input type="checkbox" name="filter" id="dropOptions"> Recieve emails from Stylo<br>
+				<input type="checkbox" name="filter" id="dropOptions"> New locations in your areas<br>
+				<input type="checkbox" name="filter" id="dropOptions"> New study groups in your area.<br>
+				<input type="checkbox" name="filter" id="dropOptions"> Favorite Location updates<br>
+				<button id="opener" type="button" class="btn btn-secondary btn-sm">
+					Save
+				</button>
+			</div>
+			</div>
+    </div>
+  </div>
+
+	<!-- Location Settings -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        	Location Settings</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+				<form>
+				  <div class="form-group">
+				    <label for="exampleFormControlInput1">Primary Location</label>
+				    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Primary Location">
+				  </div>
+				  <div id="dialog" title="Form was submitted">
+					  <p>Saved.</p>
+					</div>
+					<button id="opener" type="button" class="btn btn-secondary btn-sm">
+						Save
+					</button>
+				</form>
+			</div>
+    </div>
+  </div>
+	<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+        	Privacy & Safety</a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body">
+			 <h6>Privacy Information</h6>
+				 <p>We use that information to provide the Service’s
+					 functionality, fulfill your requests, improve the Service’s quality,
+					 engage in research and analysis relating to the Service, personalize
+					 your experience, track usage of the Service, provide feedback to third
+					 party businesses that are listed on the Service, display relevant advertising,
+					 market the Service, provide customer support, message you, back up our systems,
+					 allow for disaster recovery, enhance the security of the Service, and comply
+					 with legal obligations. Even when we do not retain such information, it still
+					 must be transmitted to our servers initially and stored long enough to process.</p>
+				<h6>Security Infromation</h6>
+					<p>We use various safeguards to protect the personal information
+						submitted to us, both during transmission and once we receive it.
+						However, no method of transmission over the Internet or via mobile
+						device, or method of electronic storage, is 100% secure. Therefore,
+						while we strive to use commercially acceptable means to protect your
+						personal information, we cannot guarantee its absolute security.</p>
+			</div>
+    </div>
+  </div>
+</div>
 			<!-- Logout -->
-				<div class="container text center">
+				<div class="container text-center">
 					<a href="/" class="btn btn-light btn-sm" role="button">Logout</a>
 				</div>
 

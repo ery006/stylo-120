@@ -12,6 +12,21 @@
 	/*float: right;*/
 }
 
+.star {
+    visibility:hidden;
+    font-size:30px;
+    cursor:pointer;
+}
+.star:before {
+   content: "\2605";
+   position: absolute;
+   visibility:visible;
+}
+.star:checked:before {
+   content: "\2606";
+   position: absolute;
+}
+
 .searchbar {
 	width: 130px;
 }
@@ -52,7 +67,7 @@ input.chk-btn + label {
   padding: 5px 8px;
   cursor: pointer;
   border-radius: 5px;
- 
+
 }
 input.chk-btn:not(:checked) + label:hover {
   box-shadow: 0px 1px 3px;

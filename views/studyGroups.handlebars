@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title>Stylo</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJdJ76C7tY7RfZpyaF3C5k4ysU_NkotzM"></script>
+		<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+	    </script>
+	    <script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js"></script>
+		<script type="text/javascript" src="/js/map.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	</head>
+
+	<body onload="studyGroupsMap()">
+		<div class="text-center">
+		  <h1>Stylo</h1>
+		  <p>Welcome to Stylo!</p>
+		</div>
+
+		<!-- Search bar -->
+		<div class="container">
+			<div class="row">
+				<form>
+			  		<input type="text" placeholder="Search.." name="search" class="searchbar">
+			  	</form>
+			  	<div id="dialog" title="Filters">
+				  <p>
+					  <label for="distance">Distance</label>
+					  <input type="text" id="distance" readonly style="border:0; color:#f6931f; font-weight:bold;">
+					</p>
+					<div id="slider-range-max-dist" class="mySlider"></div>
+					<p>
+					  <label for="price">Price</label>
+					  <input type="text" id="price" readonly style="border:0; color:#f6931f; font-weight:bold;">
+					</p>
+					<div id="slider-range-max-price" class="mySlider"></div>
+					<fieldset>
+					    <label>Sound </label><br/>
+					    <label for="radio-1" class="myRadio">Quiet</label>
+					    <input type="radio" name="radio-1" id="radio-1" class="myRadio">
+					    <label for="radio-2" class="myRadio">Little Noise</label>
+					    <input type="radio" name="radio-1" id="radio-2" class="myRadio">
+					    <label for="radio-3" class="myRadio">Loud</label>
+					    <input type="radio" name="radio-1" id="radio-3" class="myRadio">
+					</fieldset>
+					<input type="checkbox" name="filter" id="dropOptions"> Wifi<br>
+					<input type="checkbox" name="filter" id="dropOptions"> 24 Hour<br>
+					<button type="button" onclick="favoriteMap()" class="btn btn-light" id="dropSubmit"> Submit </button>
+				</div>
+				<button type="button" class="btn btn-light" id="opener"><i class="fa fa-filter"></i></button>
+<!-- 		  		<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown"><i class="fa fa-filter"></i></button>
+		  		<div class="dropdown-menu keep-open" id="myDropdown">
+		  			<p>
+					  <label for="distance">Distance</label>
+					  <input type="text" id="distance" readonly style="border:0; color:#f6931f; font-weight:bold;">
+					</p>
+					<div id="slider-range-max-dist"></div>
+					<div class="widget">
+					<fieldset>
+					    <label>Sound </label><br/>
+					    <label for="radio-1">New York</label>
+					    <input type="radio" name="radio-1" id="radio-1">
+					    <label for="radio-2">Paris</label>
+					    <input type="radio" name="radio-1" id="radio-2">
+					    <label for="radio-3">London</label>
+					    <input type="radio" name="radio-1" id="radio-3">
+					  </fieldset>
+					  </div>
+
+					<p>
+					  <label for="price">Price</label>
+					  <input type="text" id="price" readonly style="border:0; color:#f6931f; font-weight:bold;">
+					</p>
+					<div id="slider-range-max-price"></div>
+
+						<input type="checkbox" name="filter" id="dropOptions"> Wifi<br>
+						<input type="checkbox" name="filter" id="dropOptions"> 24 Hour<br>
+						<button type="button" onclick="favoriteMap()" class="btn btn-light" id="dropSubmit"> Submit </button>
+				  	</div> -->
+				</div>
+		</div>
+
+		<!-- Plus button and Map -->
+		<div class="container">
+			<div class="row">
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col">
+				 	<a href="/add" class="btn btn-light" role="button"><i class="fa fa-plus"></i></a>
+				</div>
+			</div>
+			<div id="map"></div>
+		</div>
+
+
+		<!-- Tabs -->
+		<div class="container" style="text-align: center">
+			<div class="btn-group btn-group-lg">
+			  <button type="button" onclick="initMap()" class="btn btn-light btn-lg">Home</button>
+			  <button type="button" onclick="favoriteMap()" class="btn btn-light btn-lg">Favorite</button>
+			  <button type="button" onclick="studyGroupsMap()" class="btn btn-light btn-lg">Study Groups</button>
+			  <a href="/profile" class="btn btn-light btn-lg" role="button">Profile</a>
+			  <!-- <button type="button" onclick="profilePage()" class="btn btn-light btn-lg">Profile</button> -->
+			</div>
+		</div>
+	</body>
+</html>

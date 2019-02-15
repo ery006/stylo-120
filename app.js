@@ -17,6 +17,12 @@ var account = require('./routes/account');
 var login = require('./routes/login');
 var signUp = require('./routes/signUp');
 var manage = require('./routes/manage');
+var studyGroups = require('./routes/studyGroups');
+var favoriteLocs = require('./routes/favoriteLocs');
+var password = require('./routes/password');
+var notifications = require('./routes/notifications');
+var locationSetting = require('./routes/locationSetting');
+var privacy = require('./routes/privacy');
 // Example route
 // var user = require('./routes/user');
 
@@ -54,6 +60,12 @@ app.get('/add', add.view);
 app.get('/account', account.view);
 app.get('/manage', manage.view);
 app.get('/signUp', signUp.view);
+app.get('/studyGroups', studyGroups.view);
+app.get('/favoriteLocs', favoriteLocs.view);
+app.get('/password', password.view);
+app.get('/notifications', notifications.view);
+app.get('/locationSetting', locationSetting.view);
+app.get('/privacy', privacy.view);
 // app.get('/login', login.view);
 // Example route
 // app.get('/users', user.list);
