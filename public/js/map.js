@@ -68,6 +68,9 @@ $( function() {
     $( "#price" ).val( $( "#slider-range-max-price" ).slider( "value" ) );
   } );
 
+function willDelete() {
+	alert("This location will be deleted!");
+}
 
 // Home screen map
 function initMap() {

@@ -12,14 +12,15 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-		<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJdJ76C7tY7RfZpyaF3C5k4ysU_NkotzM&callback=initMap"></script>
+		<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJdJ76C7tY7RfZpyaF3C5k4ysU_NkotzM"></script>
 		<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
 	    </script>
 	    <script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js"></script>
-			<script type="text/javascript" src="/js/account.js"></script>
 			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 			<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+						<script type="text/javascript" src="/js/account.js"></script>
+
 		</head>
 	<body>
 		<div class="container text-center">
@@ -40,6 +41,7 @@
 				  <li class="list-group-item"><a href="/privacy">Privacy & Safety</a></li>
 				</ul>
 				<br> -->
+
 
 <div class="panel-group" id="accordion">
 
@@ -66,14 +68,15 @@
 				    <label for="exampleFormControlInput2">New Password</label>
 				    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="New Password">
 				  </div>
-				  <div id="dialog" title="Form was submitted">
-					  <p>Your password has been successfully changed.</p>
-					</div>
-						<button id="opener" type="button" class="btn btn-secondary btn-sm">
-							Change
-						</button>
 				</form>
-			</div>
+		</div>
+				<div id="dialog" title="Form was submitted">
+					  <p>Your password has been successfully changed.</p>
+				  </div>
+				<button id="opener" type="button" class="btn btn-secondary btn-sm">
+					Change
+				</button>
+
     </div>
   </div>
 
@@ -88,19 +91,19 @@
     </div>
     <div id="collapse2" class="panel-collapse collapse">
       <div class="panel-body">
-				<div id="dialog" title="Filters">
-				<input type="checkbox" name="filter" id="dropOptions"> Recieve emails from Stylo<br>
+				<input type="checkbox" name="filter" id="dropOptions"> Receive emails from Stylo<br>
 				<input type="checkbox" name="filter" id="dropOptions"> New locations in your areas<br>
 				<input type="checkbox" name="filter" id="dropOptions"> New study groups in your area.<br>
 				<input type="checkbox" name="filter" id="dropOptions"> Favorite Location updates<br>
-				<div id="dialog" title="Form was submitted">
+			</div>
+				<div id="dialog2" title="Form was submitted">
 					<p>Saved.</p>
 				</div>
-				<button id="opener" type="button" class="btn btn-secondary btn-sm">
+				<button id="opener2" type="button" class="btn btn-secondary btn-sm">
 					Save
 				</button>
 			</div>
-			</div>
+
     </div>
   </div>
 
@@ -119,10 +122,10 @@
 				    <label for="exampleFormControlInput1">Primary Location</label>
 				    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Primary Location">
 				  </div>
-				  <div id="dialog" title="Form was submitted">
+				  <div id="dialog3" title="Form was submitted">
 					  <p>Saved.</p>
 					</div>
-					<button id="opener" type="button" class="btn btn-secondary btn-sm">
+					<button id="opener3" type="button" class="btn btn-secondary btn-sm">
 						Save
 					</button>
 				</form>
@@ -150,12 +153,10 @@
 					 must be transmitted to our servers initially and stored long enough to process.</p>
 				<h6>Security Infromation</h6>
 					<p>We use various safeguards to protect the personal information
-						submitted to us, both during transmission and once we receive it.
-						However, no method of transmission over the Internet or via mobile
-						device, or method of electronic storage, is 100% secure. Therefore,
+						submitted to us, both during transmission and once we receive it. Therefore,
 						while we strive to use commercially acceptable means to protect your
 						personal information, we cannot guarantee its absolute security.</p>
-			</div>
+		</div>
     </div>
   </div>
 </div>
@@ -169,9 +170,9 @@
 			<div class="btn-group btn-group-lg">
 			  <!-- <button type="button" onclick="/home" class="btn btn-light btn-lg">Home</button>
 			  <button type="button" onclick="favoriteMap()" class="btn btn-light btn-lg">Favorite</button> -->
-			  <a href="/" class="btn btn-light btn-lg" role="button">Home</a>
-			  <a href="/" class="btn btn-light btn-lg" role="button">Favorite</a>
-			  <a href="/" class="btn btn-light btn-lg" role="button">Study Groups</a>
+			  <a href="/home" class="btn btn-light btn-lg" role="button">Home</a>
+			  <a href="/favoriteLocs" class="btn btn-light btn-lg" role="button">Favorite</a>
+			  <a href="/studyGroups" class="btn btn-light btn-lg" role="button">Study Groups</a>
 			  <!-- <button type="button" onclick="studyGroupsMap()" class="btn btn-light btn-lg">Study Groups</button> -->
 			  <a href="/profile" class="btn btn-light btn-lg" role="button">Profile</a>
 			  <!-- <button type="button" onclick="profilePage()" class="btn btn-light btn-lg">Profile</button> -->
