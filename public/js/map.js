@@ -74,6 +74,7 @@ function willDelete() {
 
 // Home screen map
 function initMap() {
+
 	// Create an array of alphabetical characters used to label the markers.
 	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -159,6 +160,9 @@ function initMap() {
 }
 
 function favoriteMap() {
+	$.getJSON( "favLocations.json", function( json ) {
+    favLocs = json;
+});
 		// Create an array of alphabetical characters used to label the markers.
 	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -243,6 +247,9 @@ function favoriteMap() {
 }
 
 function studyGroupsMap() {
+	$.getJSON( "studyLocations.json", function( json ) {
+    studyLocs = json;
+});
 	// Create an array of alphabetical characters used to label the markers.
 	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
