@@ -3,10 +3,14 @@
 		<title>Stylo</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css"
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/home.css">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -21,85 +25,59 @@
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 	</head>
 
-	<body onload="favoriteMap()">
-		<div class="text-center">
-		  <h1>Stylo</h1>
-		  <p>Welcome to Stylo!</p>
-		</div>
+	<body onload="initMap()">
+		<header class="w3-bar w3-card w3-theme">
+		  <h1 class="myHeader">Stylo</h1>
+		</header>
 
 		<!-- Search bar -->
-		<div class="container">
-			<div class="row">
+		<div class="w3-row w3-theme-l5">
+			<div class="w3-container" id="searchbar">
 				<form>
-			  		<input type="text" placeholder="Search.." name="search" class="searchbar">
-			  	</form>
-			  	<div id="dialog" title="Filters">
-				  <p>
-					  <label for="distance">Distance</label>
-					  <input type="text" id="distance" readonly style="border:0; color:#f6931f; font-weight:bold;">
-					</p>
-					<div id="slider-range-max-dist" class="mySlider"></div>
-					<p>
-					  <label for="price">Price</label>
-					  <input type="text" id="price" readonly style="border:0; color:#f6931f; font-weight:bold;">
-					</p>
-					<div id="slider-range-max-price" class="mySlider"></div>
-					<fieldset>
-					    <label>Sound </label><br/>
-					    <label for="radio-1" class="myRadio">Quiet</label>
-					    <input type="radio" name="radio-1" id="radio-1" class="myRadio">
-					    <label for="radio-2" class="myRadio">Little Noise</label>
-					    <input type="radio" name="radio-1" id="radio-2" class="myRadio">
-					    <label for="radio-3" class="myRadio">Loud</label>
-					    <input type="radio" name="radio-1" id="radio-3" class="myRadio">
-					</fieldset>
-					<input type="checkbox" name="filter" id="dropOptions"> Wifi<br>
-					<input type="checkbox" name="filter" id="dropOptions"> 24 Hour<br>
-					<button type="button" onclick="favoriteMap()" class="btn btn-light" id="dropSubmit"> Submit </button>
-				</div>
-				<button type="button" class="btn btn-light" id="opener"><i class="fa fa-filter"></i></button>
-<!-- 		  		<button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown"><i class="fa fa-filter"></i></button>
-		  		<div class="dropdown-menu keep-open" id="myDropdown">
-		  			<p>
-					  <label for="distance">Distance</label>
-					  <input type="text" id="distance" readonly style="border:0; color:#f6931f; font-weight:bold;">
-					</p>
-					<div id="slider-range-max-dist"></div>
-					<div class="widget">
-					<fieldset>
-					    <label>Sound </label><br/>
-					    <label for="radio-1">New York</label>
-					    <input type="radio" name="radio-1" id="radio-1">
-					    <label for="radio-2">Paris</label>
-					    <input type="radio" name="radio-1" id="radio-2">
-					    <label for="radio-3">London</label>
-					    <input type="radio" name="radio-1" id="radio-3">
-					  </fieldset>
-					  </div>
-
-					<p>
-					  <label for="price">Price</label>
-					  <input type="text" id="price" readonly style="border:0; color:#f6931f; font-weight:bold;">
-					</p>
-					<div id="slider-range-max-price"></div>
-
+			  		<input type="text" placeholder="Search.." name="search" class="mySearchBar">
+			  		<div id="dialog" title="Filters">
+					  	<p>
+						  <label for="distance">Distance</label>
+						  <input type="text" id="distance" readonly style="border:0; color:#f6931f; font-weight:bold;">
+						</p>
+						<div id="slider-range-max-dist" class="mySlider"></div>
+						<p>
+						  <label for="price">Price</label>
+						  <input type="text" id="price" readonly style="border:0; color:#f6931f; font-weight:bold;">
+						</p>
+						<div id="slider-range-max-price" class="mySlider"></div>
+						<fieldset>
+						    <label>Sound </label><br/>
+						    <label for="radio-1" class="myRadio">Quiet</label>
+						    <input type="radio" name="radio-1" id="radio-1" class="myRadio">
+						    <label for="radio-2" class="myRadio">Little Noise</label>
+						    <input type="radio" name="radio-1" id="radio-2" class="myRadio">
+						    <label for="radio-3" class="myRadio">Loud</label>
+						    <input type="radio" name="radio-1" id="radio-3" class="myRadio">
+						</fieldset>
 						<input type="checkbox" name="filter" id="dropOptions"> Wifi<br>
 						<input type="checkbox" name="filter" id="dropOptions"> 24 Hour<br>
 						<button type="button" onclick="favoriteMap()" class="btn btn-light" id="dropSubmit"> Submit </button>
-				  	</div> -->
+					</div>
+					<button type="button" class="w3-button w3-hover-teal" id="opener"><i class="fa fa-filter"></i></button>
+			  	</form>
 				</div>
-		</div>
 
-		<!-- Plus button and Map -->
-		<div class="container">
-			<div class="row">
-				<div class="col"></div>
-				<div class="col"></div>
-				<div class="col"></div>
-				<div class="col"></div>
-				<div class="col"></div>
-				<div class="col">
-				 	<a href="/add" class="btn btn-light" role="button"><i class="fa fa-plus"></i></a>
+			<div class="w3-row">
+				<div class="w3-third" ></div>
+				<div class="w3-third" >
+				
+				</div>
+				<div class="w3-third" >
+					<div id="dialogColor" title="Color Meanings">
+					  	<p>
+							<font style="color:red">Red = Normal Locations</font><br/>
+							<font style="color:blue">Blue = Favorite Locations</font><br/>
+							<font style="color:green">Green = Study Groups Locations</font>
+						</p>
+				  	</div>
+					<button id="openerColor" type="button" class="w3-button w3-hover-teal"> <i class="fa fa-question-circle"></i> </button>
+				 	<a href="/add" id="addButton" class="w3-button w3-hover-teal" role="button"><i class="fa fa-plus"></i></a>
 				</div>
 			</div>
 			<div id="map"></div>
@@ -107,14 +85,13 @@
 
 
 		<!-- Tabs -->
-		<div class="container" style="text-align: center">
-			<div class="btn-group btn-group-lg">
-			  <button type="button" onclick="initMap()" class="btn btn-light btn-lg">Home</button>
-			  <button type="button" onclick="favoriteMap()" class="btn btn-light btn-lg">Favorite</button>
-			  <button type="button" onclick="studyGroupsMap()" class="btn btn-light btn-lg">Study Groups</button>
-			  <a href="/profile" class="btn btn-light btn-lg" role="button">Profile</a>
-			  <!-- <button type="button" onclick="profilePage()" class="btn btn-light btn-lg">Profile</button> -->
-			</div>
-		</div>
+		<footer class="w3-row w3-theme" id="bottomBar">
+			<!-- <div class="w3-row"> -->
+			  <button type="button" onclick="initMap()" class="w3-button w3-hover-teal w3-quarter w3-container">Home</button>
+			  <button type="button" onclick="favoriteMap()" class="w3-button w3-hover-teal w3-quarter w3-container">Favorite</button>
+			  <button type="button" onclick="studyGroupsMap()" class="w3-button w3-hover-teal w3-quarter w3-container">Study Groups</button>
+			  <a href="/profile" class="w3-button w3-hover-teal w3-quarter w3-container" role="button">Profile</a>
+			<!-- </div> -->
+		</footer>
 	</body>
 </html>

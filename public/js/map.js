@@ -24,13 +24,31 @@ $( function() {
 	    duration: 1000
 	  },
 	  hide: {
-	    effect: "explode",
+	    effect: "blind",
 	    duration: 1000
 	  }
 	});
 
 	$( "#opener" ).on( "click", function() {
 	  $( "#dialog" ).dialog( "open" );
+	});
+} );
+
+$( function() {
+	$( "#dialogColor" ).dialog({
+	  autoOpen: false,
+	  show: {
+	    effect: "blind",
+	    duration: 1000
+	  },
+	  hide: {
+	    effect: "blind",
+	    duration: 1000
+	  }
+	});
+
+	$( "#openerColor" ).on( "click", function() {
+	  $( "#dialogColor" ).dialog( "open" );
 	});
 } );
 
@@ -103,7 +121,10 @@ function initMap() {
 		marker = new google.maps.Marker({
         	position: latlong,
         	map: map,
-        	label: labels[i]
+        	icon: {
+  				url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+			}
+        	// label: labels[i]
     	});
 
 
@@ -157,6 +178,139 @@ function initMap() {
 	    markers.push(marker);
 
 	}
+
+	// Add study groups
+	for(i = 0; i < studyLocs.locations.length; i++) {
+	var lat = parseFloat(studyLocs.locations[i].lat);
+	var long = parseFloat(studyLocs.locations[i].long);
+	var latlong = new google.maps.LatLng(lat, long);
+	//var infowindow = new google.maps.InfoWindow();
+	marker = new google.maps.Marker({
+    	position: latlong,
+    	map: map,
+    	icon: {
+  			url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+		}
+    	// label: labels[i]
+	});
+
+	var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h4 id="firstHeading" class="firstHeading">' +
+            studyLocs.locations[i].name +
+            '</h4>'+
+            '<div id="bodyContent">'+
+            '<b>Description</b>' +
+          '<div>' +
+            '<p>' + studyLocs.locations[i].class + '</p>' +
+						'</div>' +
+            '<p>' + studyLocs.locations[i].description + '</p>' +
+						'</div>' +
+						'<div>' +
+            '<p>' + studyLocs.locations[i].hours + '</p>' +
+						'</div>' +
+						'<div>' +
+            '<p>' + studyLocs.locations[i].address + '</p>' +
+						'</div>' +
+						'<div>' +
+            'Open'+
+						'</div>' +
+						'<div>' +
+            '<p>' + studyLocs.locations[i].seating + '</p>' +
+						'</div>' +
+						'<div> <img class="infoWindowImage" src=' +
+						studyLocs.locations[i].imageURL + '>'
+						+
+            '<br/><a href="https://maps.google.com">' +
+            'Directions</a>'
+						'</div>' +
+            '</div>'
+						'</div>';
+
+	// infowindow = new google.maps.InfoWindow({
+	// content: contentString
+	// });
+
+	marker.contentString = contentString;
+	google.maps.event.addListener(marker, 'click', (function(marker, i) {
+		return function() {
+		infowindow.setContent(this.contentString);
+		infowindow.open(map, this);
+		}
+	})(marker, i));
+	// marker.addListener('click', function() {
+	// 	infowindow.setContent(contentString);
+ //      infowindow.open(map, marker);
+ //    });
+
+	}
+
+	// Add favorites
+	for(i = 0; i < favLocs.locations.length; i++) {
+		var lat = parseFloat(favLocs.locations[i].lat);
+		var long = parseFloat(favLocs.locations[i].long);
+		var latlong = new google.maps.LatLng(lat, long);
+		//var infowindow = new google.maps.InfoWindow();
+		marker = new google.maps.Marker({
+        	position: latlong,
+        	map: map,
+        	icon: {
+      			url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+    		}
+        	// label: labels[i]
+    	});
+
+		var contentString = '<div id="content">'+
+	            '<div id="siteNotice">'+
+	            '</div>'+
+	            '<h4 id="firstHeading" class="firstHeading">' +
+	            favLocs.locations[i].name +
+	            '</h4>'+
+	            '<div id="bodyContent">'+
+	            '<b>Description</b>' +
+	            '<p>' + favLocs.locations[i].description + '</p>' +
+							'</div>' +
+							'<div>' +
+	            '<p>' + favLocs.locations[i].hours + '</p>' +
+							'</div>' +
+							'<div>' +
+	            '<p>' + favLocs.locations[i].address + '</p>' +
+							'</div>' +
+							'<div>' +
+	            'Open'+
+							'</div>' +
+							'<div>' +
+	            '<p>' + favLocs.locations[i].seating + '</p>' +
+							'</div>' +
+							'<div> <img class="infoWindowImage" src=' +
+							favLocs.locations[i].imageURL + '>'
+							+
+	            '<br/><a href="https://maps.google.com">' +
+	            'Directions</a>'
+							'</div>' +
+	            '</div>'
+							'</div>';
+
+		// infowindow = new google.maps.InfoWindow({
+		// content: contentString
+		// });
+
+		marker.contentString = contentString;
+		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			return function() {
+			infowindow.setContent(this.contentString);
+			infowindow.open(map, this);
+			}
+		})(marker, i));
+		// marker.addListener('click', function() {
+		// 	infowindow.setContent(contentString);
+	 //      infowindow.open(map, marker);
+	 //    });
+
+
+	}
+
 }
 
 function favoriteMap() {
@@ -190,7 +344,10 @@ function favoriteMap() {
 		marker = new google.maps.Marker({
         	position: latlong,
         	map: map,
-        	label: labels[i]
+        	icon: {
+      			url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+    		}
+        	// label: labels[i]
     	});
 
 		var contentString = '<div id="content">'+
@@ -277,7 +434,10 @@ function studyGroupsMap() {
 		marker = new google.maps.Marker({
         	position: latlong,
         	map: map,
-        	label: labels[i]
+        	icon: {
+      			url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+    		}
+        	// label: labels[i]
     	});
 
 		var contentString = '<div id="content">'+
@@ -330,5 +490,5 @@ function studyGroupsMap() {
 	 //      infowindow.open(map, marker);
 	 //    });
 
-}
+	}
 }

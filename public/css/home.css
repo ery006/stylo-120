@@ -1,15 +1,33 @@
-.searchbar {
+.mySearchBar {
 	width: 60%;
+}
+
+.myHeader {
+  text-align: center;
 }
 
 #map {
 	height: 500px;
 	width: 80%;
 	margin: 0 auto 0 auto;
+  margin-bottom: 30px;
 }
 
-.add-btn {
-	/*float: right;*/
+#bottomBar {
+  text-align: center;
+}
+
+#openerColor {
+  margin-left: 30px;
+}
+
+#searchBar {
+    text-align: center;
+}
+
+#addButton {
+  float: right;
+  margin-right: 30px;
 }
 
 .star {
@@ -25,10 +43,6 @@
 .star:checked:before {
    content: "\2606";
    position: absolute;
-}
-
-.searchbar {
-	width: 130px;
 }
 
 .row {

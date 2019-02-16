@@ -6,7 +6,7 @@ $( function() {
         duration: 1000
       },
       hide: {
-        effect: "explode",
+        effect: "blind",
         duration: 1000
       }
     });
