@@ -191,6 +191,15 @@ function setStudyGroups() {
 	studyGroupsMap();
 }
 
+function homeMap() {
+	for (i = 0; i < markers.length; i++) {
+        var marker = markers[i];
+
+        marker.setVisible(true);
+    }
+	 
+}
+
 function favoriteMap() {
 	for (i = 0; i < markers.length; i++) {
         var marker = markers[i];
