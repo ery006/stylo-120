@@ -63,12 +63,7 @@
 			  	</form>
 				</div>
 
-			<div class="w3-row">
-				<div class="w3-third" ></div>
-				<div class="w3-third" >
-				
-				</div>
-				<div class="w3-third" >
+			<div class="w3-row" id="myRow">
 					<div id="dialogColor" title="Color Meanings">
 					  	<p>
 							<font style="color:red">Red = Normal Locations</font><br/>
@@ -77,8 +72,8 @@
 						</p>
 				  	</div>
 					<button id="openerColor" type="button" class="w3-button w3-hover-teal"> <i class="fa fa-question-circle"></i> </button>
+					<div class="extra"></div>
 				 	<a href="/add" id="addButton" class="w3-button w3-hover-teal" role="button"><i class="fa fa-plus"></i></a>
-				</div>
 			</div>
 			<div id="map"></div>
 		</div>
@@ -87,10 +82,10 @@
 		<!-- Tabs -->
 		<footer class="w3-row w3-theme" id="bottomBar">
 			<!-- <div class="w3-row"> -->
-			  <button type="button" onclick="homeMap()" class="w3-button w3-hover-teal w3-quarter w3-container">Home</button>
-			  <button type="button" onclick="favoriteMap()" class="w3-button w3-hover-teal w3-quarter w3-container">Favorite</button>
-			  <button type="button" onclick="studyGroupsMap()" class="w3-button w3-hover-teal w3-quarter w3-container">Study Groups</button>
-			  <a href="/profile" class="w3-button w3-hover-teal w3-quarter w3-container" role="button">Profile</a>
+			  <button type="button" onclick="homeMap()" class="w3-button w3-hover-teal " id="bottomButton">Home</button>
+			  <button type="button" onclick="favoriteMap()" class="w3-button w3-hover-teal" id="bottomButton">Favorite</button>
+			  <button type="button" onclick="studyGroupsMap()" class="w3-button w3-hover-teal " id="bottomButton">Study Groups</button>
+			  <a href="/profile" class="w3-button w3-hover-teal " role="button" id="bottomButton">Profile</a>
 			<!-- </div> -->
 		</footer>
 	</body>

@@ -18,16 +18,25 @@
 }
 
 #openerColor {
-  margin-left: 30px;
-}
+/*  margin-left: 30px;
+*/}
 
 #searchBar {
     text-align: center;
 }
 
-#addButton {
-  float: right;
-  margin-right: 30px;
+#myRow {
+    text-align: center;
+}
+
+.extra {
+  width: 15px;
+  display:inline-block;
+}
+
+#bottomButton {
+  display: inline-block;
+  padding: 8px 8px !important;
 }
 
 .star {
