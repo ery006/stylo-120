@@ -155,7 +155,7 @@ function initMap() {
 	            '<div id="siteNotice">'+
 	            '</div>'+
 	            '<h4 id="firstHeading" class="firstHeading">' +
-	            locs.locations[i].name + '<input class="star" type="checkbox" title="bookmark page" checked>' +
+	            locs.locations[i].name + 
 	            '</h4>'+
 	            '<div id="bodyContent">'+
 	            '<b>Description</b>' +
