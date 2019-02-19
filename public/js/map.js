@@ -82,6 +82,21 @@ function willDelete() {
 	alert("This location will be deleted!");
 }
 
+function mySearch() {
+	// console.log("he");
+	for (i = 0; i < 5; i++) {
+        var marker = markers[i];
+
+        marker.setVisible(true);
+    }
+
+    for (i = 5; i < markers.length; i++) {
+        var marker = markers[i];
+
+        marker.setVisible(false);
+    }
+}
+
 // Home screen map
 function initMap() {
 

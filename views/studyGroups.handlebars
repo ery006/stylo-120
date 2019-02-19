@@ -35,6 +35,7 @@
 			<div class="w3-container" id="searchbar">
 				<form>
 			  		<input type="text" placeholder="Search.." name="search" class="mySearchBar">
+			  		<button type="button" onclick="mySearch()" class="w3-button w3-hover-teal"><i class="fa fa-search"></i></button>
 			  		<div id="dialog" title="Filters">
 					  	<p>
 						  <label for="distance">Distance</label>
@@ -57,7 +58,7 @@
 						</fieldset>
 						<input type="checkbox" name="filter" class="dropOptions" id="wifi"> Wifi<br>
 						<input type="checkbox" name="filter" class="dropOptions" id="hour"> 24 Hour<br>
-						<button type="button" onclick="filterStudyMap()" class="btn btn-light" id="dropSubmit"> Submit </button>
+						<button type="button" onclick="filterMap()" class="btn btn-light" id="dropSubmit"> Submit </button>
 					</div>
 					<button type="button" class="w3-button w3-hover-teal" id="opener"><i class="fa fa-filter"></i></button>
 			  	</form>
