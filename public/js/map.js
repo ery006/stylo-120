@@ -1,5 +1,7 @@
 var locs;
 var markers = [];
+var favMarkers = [];
+var studyMarkers = [];
 
 $.getJSON( "locations.json", function( json ) {
     locs = json;
@@ -126,6 +128,13 @@ function initMap() {
         	// label: labels[i]
     	});
 
+    	if(locs.locations[i].category == "favorite") {
+			favMarkers.push(marker);
+		}
+		else if(locs.locations[i].category == "study") {
+			studyMarkers.push(marker);
+		}
+
 
 		var contentString = '<div id="content">'+
 	            '<div id="siteNotice">'+
@@ -228,6 +237,156 @@ function studyGroupsMap() {
             marker.setVisible(false);
         }
     }
+}
+
+function filterStudyMap() {
+	var distance = $( "#distance" ).val();
+	var price = $( "#price" ).val();
+	var arr = [];
+	var wifi = "";
+	var hour = "";
+	var sound = "";
+	var myArr = [];
+
+	// for(var i = 0; i < 3; i++) {
+	// 	arr.push(false);
+	// }
+	// arr.push(true);
+	// arr.push(true);
+
+	price = price.replace("$", "");
+	price = parseInt(price);
+	distance = distance.replace("mi", "");
+	distance = distance.replace(" ", "");
+	distance = parseInt(distance);
+
+	if ($('#wifi').is(":checked"))
+	{
+		wifi = "true";
+	}
+
+	if ($('#hour').is(":checked"))
+	{
+		hour = "true";
+	}
+
+	if ($('#radio-1').is(":checked"))
+	{
+		sound = "quiet";
+	}
+
+	else if ($('#radio-2').is(":checked"))
+	{
+		sound = "background";
+	}
+
+	else if ($('#radio-3').is(":checked"))
+	{
+		sound = "loud";
+	}
+
+	for (var i = 0; i < studyMarkers.length; i++) {
+        marker = studyMarkers[i];
+        var curSound = locs.locations[i].sound;
+		var curPrice = locs.locations[i].price;
+		var curWifi = locs.locations[i].wifi;
+		var curHour = locs.locations[i].hour;
+		var curDistance = locs.locations[i].distance;
+
+
+
+		// for(var j = 0; j < 3; j++) {
+		// 	if(arr[i] == true && !(myArr[i]) === (realArr[i])) {
+		// 		setTrue = false;
+		// 	}
+		// }
+
+		if(curPrice <= price && curDistance <= distance) {
+			marker.setVisible(true);
+
+		}
+        
+        // Categories don't match 
+        else {
+            marker.setVisible(false);
+        }
+    }
+	$( "#dialog" ).dialog( "close" );
+}
+
+function filterFavMap() {
+	var distance = $( "#distance" ).val();
+	var price = $( "#price" ).val();
+	var arr = [];
+	var wifi = "";
+	var hour = "";
+	var sound = "";
+	var myArr = [];
+
+	// for(var i = 0; i < 3; i++) {
+	// 	arr.push(false);
+	// }
+	// arr.push(true);
+	// arr.push(true);
+
+	price = price.replace("$", "");
+	price = parseInt(price);
+	distance = distance.replace("mi", "");
+	distance = distance.replace(" ", "");
+	distance = parseInt(distance);
+
+	if ($('#wifi').is(":checked"))
+	{
+		wifi = "true";
+	}
+
+	if ($('#hour').is(":checked"))
+	{
+		hour = "true";
+	}
+
+	if ($('#radio-1').is(":checked"))
+	{
+		sound = "quiet";
+	}
+
+	else if ($('#radio-2').is(":checked"))
+	{
+		sound = "background";
+	}
+
+	else if ($('#radio-3').is(":checked"))
+	{
+		sound = "loud";
+	}
+
+	for (var i = 0; i < favMarkers.length; i++) {
+        marker = favMarkers[i];
+        var curSound = locs.locations[i].sound;
+		var curPrice = locs.locations[i].price;
+		var curWifi = locs.locations[i].wifi;
+		var curHour = locs.locations[i].hour;
+		var curDistance = locs.locations[i].distance;
+
+
+
+		// for(var j = 0; j < 3; j++) {
+		// 	if(arr[i] == true && !(myArr[i]) === (realArr[i])) {
+		// 		setTrue = false;
+		// 	}
+		// }
+
+		if(curPrice <= price && curDistance <= distance) {
+			marker.setVisible(true);
+
+		}
+        
+        // Categories don't match 
+        else {
+            marker.setVisible(false);
+        }
+    }
+	$( "#dialog" ).dialog( "close" );
 }
 
 function filterMap() {
