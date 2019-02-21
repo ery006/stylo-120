@@ -3,7 +3,9 @@
  * GET add page.
  */
 
+var data = require('../favorites.json');
 
 exports.view = function(req, res){
-  res.render('manage');
+  console.log(data.locs);
+  res.render('manage', data);
 };

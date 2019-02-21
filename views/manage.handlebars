@@ -13,161 +13,67 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-		<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJdJ76C7tY7RfZpyaF3C5k4ysU_NkotzM"></script>
-		<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-	    </script>
-	    <script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js"></script>
-		<script type="text/javascript" src="/js/map.js"></script>
+
 	</head>
 	<body>
-		<div class=" container text-center">
-			<h1> Manage Favorites </h1>
+			<header class="w3-bar w3-card w3-theme">
+			  <h1 class="myHeader">Stylo</h1>
+			</header>
 			<br>
-
+			<div class="container text-center">
 		<!-- Favorites List -->
 		<div class="list-group">
 
-			<!-- Favorties 1 -->
-			<div>
-				<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter">
-			  	Favorites 1
-				</button>
-				<!-- Modal 1 -->
-					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <h5 class="modal-title" id="exampleModalLongTitle">Favorites 1</h5>
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					          <span aria-hidden="true">&times;</span>
-					        </button>
-					      </div>
-					      <div class="modal-body">
-					        <h4>Description</h4>
-									<p>Location 1 is great for all things!
-										<div>Hours: Mon-Sat 8am-10pm</div>
-										<div>123 Address St. La Jolla, CA</div>
-										<div>Open</div>
-										<div>20 Available seats.</div>
-										<br>
-										<img class="img-responsive" width="100%" height="auto" src="https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg">
-					      </div>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-secondary" onclick="willDelete()">Delete Favorite</button>
-					        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-					      </div>
-					    </div>
-					  </div>
-					</div>
-				</div>
-				<br>
+				{{#each locs}}
+					<div>
+						<!-- <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter">
+							{{name}}
+						</button> -->
+						<!-- Modal 1 -->
+							<!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLongTitle">{{name}}</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<h4>Description</h4>
+											<p>{{description}}
+												<div>{{hours}}</div>
+												<div>{{address}}</div>
+												<div>{{seating}}</div>
+												<br>
+											</p>
+												<img class="img-responsive" width="100%" height="auto" src="https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg">
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" onclick="willDelete()">Delete Favorite</button>
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div> -->
 
-				<!-- Favorties 2 -->
-				<div>
-					<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#ModalCenterTwo">
-				  	Favorites 2
-					</button>
-					<!-- Modal 2-->
-						<div class="modal fade" id="ModalCenterTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						  <div class="modal-dialog modal-dialog-centered" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <h5 class="modal-title" id="exampleModalLongTitle">Favorites 1</h5>
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						          <span aria-hidden="true">&times;</span>
-						        </button>
-						      </div>
-						      <div class="modal-body">
-						        <h4>Description</h4>
-										<p>Location 2 is great for all things!
-											<div>Hours: Mon-Sat 8am-10pm</div>
-											<div>123 Address St. La Jolla, CA</div>
-											<div>Open</div>
-											<div>20 Available seats.</div>
-											<br>
-											<img class="img-responsive" width="100%" height="auto" src="https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg">
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" onclick="willDelete()">Delete Favorite</button>
-						        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-				</div>
-				<br>
+							<p>{{name}} {{description}}</p>
+								<div>{{hours}}</div>
+								<div>{{address}}</div>
+								<div>{{seating}}</div>
 
-				<!-- Favorties 3 -->
-				<div>
-					<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#ModalCenterThree">
-				  	Favorites 3
-					</button>
-					<!-- Modal 3 -->
-						<div class="modal fade" id="ModalCenterThree" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						  <div class="modal-dialog modal-dialog-centered" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <h5 class="modal-title" id="exampleModalLongTitle">Favorites 1</h5>
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						          <span aria-hidden="true">&times;</span>
-						        </button>
-						      </div>
-						      <div class="modal-body">
-						        <h4>Description</h4>
-										<p>Location 3 is great for all things!
-											<div>Hours: Mon-Sat 8am-10pm</div>
-											<div>123 Address St. La Jolla, CA</div>
-											<div>Open</div>
-											<div>20 Available seats.</div>
-											<br>
-											<img class="img-responsive" width="100%" height="auto" src="https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg">
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" onclick="willDelete()">Delete Favorite</button>
-						        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-						  </div>
 						</div>
-				</div>
-				<br>
+						<br>
+	 			{{/each}}
 
-				<!-- Favorties 4 -->
-				<div>
-					<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#ModalCenterFour">
-				  	Favorites 4
-					</button>
-					<!-- Modal 4 -->
-						<div class="modal fade" id="ModalCenterFour" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						  <div class="modal-dialog modal-dialog-centered" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <h5 class="modal-title" id="exampleModalLongTitle">Favorites 1</h5>
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						          <span aria-hidden="true">&times;</span>
-						        </button>
-						      </div>
-						      <div class="modal-body">
-						        <h4>Description</h4>
-										<p>Location 4 is great for all things!
-											<div>Hours: Mon-Sat 8am-10pm</div>
-											<div>123 Address St. La Jolla, CA</div>
-											<div>Open</div>
-											<div>20 Available seats.</div>
-											<br>
-											<img class="img-responsive" width="100%" height="auto" src="https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg">						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" onclick="willDelete()">Delete Favorite</button>
-						        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-				</div>
+				<a href="#" id="addFav" class="w3-button w3-hover-teal" role="button"><i class="fa fa-plus"></i></a>
+
+
 				<br>
 
 			</div>
 		</div>
+	</div>
 
 		<!-- Tabs -->
 		<footer class="w3-row w3-theme" id="bottomBar">
@@ -180,6 +86,6 @@
 			  <a href="/profile" class="w3-button w3-hover-teal " role="button" id="bottomButton">Profile</a>
 			<!-- </div> -->
 		</footer>
-	</div>
+
 	</body>
 </html>
