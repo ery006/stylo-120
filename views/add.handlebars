@@ -24,9 +24,12 @@
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	</head>
-	<body>
+	<body class="w3-theme-l5">
+	<header class="w3-bar w3-card w3-theme">
+			  <h1 class="myHeader">Add New Location</h1>
+			</header>
 		<div class="container text-center">
-		<h1> Add New Locations </h1>
+<!-- 		<h2> Add New Locations </h2> -->
 
 		<!-- Form -->
 		<form>
@@ -52,11 +55,12 @@
 		  <div id="dialog" title="Form was submitted">
 			  <p>Thank you for submitting a new location! Your new addition has been added! You can now go back and see any of the maps through the tabs at the bottom (Home, Favorites, Study Groups).</p>
 			</div>
-				<button id="opener" type="button" class="btn btn-primary btn-lg">
+				<button id="opener" type="button" class="w3-button w3-hover-teal ">
 					Submit
 				</button>
 		</form>
 
+		</div>
 		<!-- Tabs -->
 		<footer class="w3-row w3-theme" id="bottomBar">
 			<!-- <div class="w3-row"> -->
@@ -68,6 +72,5 @@
 			  <a href="/profile" class="w3-button w3-hover-teal " role="button" id="bottomButton">Profile</a>
 			<!-- </div> -->
 		</footer>
-	</div>
 	</body>
 </html>
