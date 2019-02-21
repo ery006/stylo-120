@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    {{> facebook}}
+    <script src="/js/facebook.js"></script>
 </head>
 
 <body>
@@ -16,7 +19,6 @@
   </div>
 <br>
 
-  <!-- Username-->
   <div class="container text-center">
     <div class="form-group">
 
@@ -25,6 +27,13 @@
     <div class="form-group">
         <input type="email" class="myInput" id="exampleFormControlInput1" placeholder="Password">
 
+  </div>
+
+  <div class="jumbotron">
+    <p class="facebookLogin">Please login through Facebook
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+  </p>
   </div>
 <br>
 
