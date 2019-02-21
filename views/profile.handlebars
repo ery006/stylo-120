@@ -14,8 +14,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script src="js/profile.js"></script>
 </head>
-<body>
+<body class="w3-theme-l5">
 
 	<header class="w3-bar w3-card w3-theme">
 		<h1 class="myHeader">Profile</h1>
@@ -30,12 +31,13 @@
 </div>
 
 <!-- Content -->
-  <div class="container">
-    <h4 class="text-center">Username</h4>
-		<a href="/manage">Manage Favorites</a>
+  <div class="container text-center">
+    <h4 id="username">Username</h4>
+		<a class="w3-button w3-hover-teal" href="/manage">Manage Favorites</a>
 		<div>
-			<a href="/account">Account Settings</a>
+			<a class="w3-button w3-hover-teal" href="/account">Account Settings</a>
 		</div>
+		<button id="randomEmoji">Add Spirit Animal to Username</button>
   </div>
 	<br>
 

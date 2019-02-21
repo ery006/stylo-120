@@ -15,12 +15,13 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 	</head>
-	<body>
+	<body class="w3-theme-l5">
 			<header class="w3-bar w3-card w3-theme">
-			  <h1 class="myHeader">Stylo</h1>
+			  <h1 class="myHeader">Manage Favorite Locations</h1>
 			</header>
+
 			<br>
-			<div class="container text-center">
+		<div class="container text-center ">
 		<!-- Favorites List -->
 		<div class="list-group">
 
@@ -57,11 +58,11 @@
 								</div>
 							</div> -->
 
-							<p>{{name}} {{description}}</p>
-								<div>{{hours}}</div>
-								<div>{{address}}</div>
-								<div>{{seating}}</div>
-
+							<p>{{name}} </p>
+							<div>{{description}}</div>
+							<div>{{hours}}</div>
+							<div>{{address}}</div>
+							<div>{{seating}}</div>
 						</div>
 						<br>
 	 			{{/each}}
@@ -89,12 +90,12 @@
 					<button data-toggle="collapse" data-target="#demo" class="w3-button w3-hover-teal">+</button>
 					<br>
 						<div id="demo" class="collapse">
-							<form id="addFavorite" role="form" method="get" action="/addFavorite.js">
+							<form id="addFavorite" role="form" method="get" action="/addFavorite">
 				    		<div class="form-group">
 				      		<label for="name">Location</label>
-				      		<input type="text" class="form-control" id="city" placeholder="City/town/zipcode" name="city">
+				      		<input type="text" class="form-control" id="city" placeholder="Name of location" name="locName">
 				    		</div>
-								<div class="form-group">
+								<!-- <div class="form-group">
 								    <label for="exampleFormControlSelect1">Choose a study location</label>
 								    <select class="form-control" id="exampleFormControlSelect1">
 											<option>Select One</option>
@@ -111,8 +112,8 @@
 											<option>The New Place</option>
 											<option>The Computer Labs</option>
 								    </select>
-								</div>
-				    		<input type="submit" id="submitBtn" class="btn btn-secondary btn-sm" value="Add Favorite"></input>
+								</div> -->
+				    		<input type="submit" id="submitBtn" class="w3-button w3-hover-teal " value="Add Favorite"></input>
 							</form>
 							<br>
 							<br>
