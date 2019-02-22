@@ -35,7 +35,7 @@
 							<div>{{address}}</div>
 							<div>{{seating}}</div>
 						<!-- <a class="w3-button w3-hover-teal" onclick="myFunction()">Delete</a> -->
-						
+
 
 					<br>
 					</div>
@@ -44,7 +44,8 @@
 
 					<!-- Add option -->
 
-					<button data-toggle="collapse" data-target="#demo" class="w3-button w3-hover-teal">+</button>
+					<button data-toggle="collapse" data-target="#demo" class="w3-button w3-hover-teal">Edit</button>
+					<br>
 					<br>
 						<div id="demo" class="collapse">
 							<form id="addFavorite" role="form" method="get" action="/addFavorite">
@@ -52,20 +53,28 @@
 				      		<label for="name">Location</label>
 				      		<input type="text" class="form-control" id="city" placeholder="Name of location" name="locName">
 				    		</div>
-
 				    		<input type="submit" id="submitBtn" class="w3-button w3-hover-teal " value="Add Favorite"></input>
 							</form>
 							<br>
 							<br>
 						</div>
-						<button data-toggle="collapse" data-target="#demo" class="w3-button w3-hover-teal">-</button>
-						<br>
+
 						<div id="demo" class="collapse">
 							<form id="deleteFavorite" role="form" method="get" action="/deleteFavorite">
 				    		<div class="form-group">
 				      		<label for="name">Location</label>
 				      		<input type="text" class="form-control" id="city" placeholder="Name of location" name="deleteLocName">
 				    		</div>
+								<br>
+
+						<!-- <button data-toggle="collapse" data-target="#demo" class="w3-button w3-hover-teal">-</button>
+						<br>
+						<div id="demo" class="collapse">
+							<form id="deleteFavorite" role="form" method="get" action="/deleteFavorite">
+				    		<div class="form-group">
+				      		<label for="name">Location</label>
+				      		<input type="text" class="form-control" id="city" placeholder="Name of location" name="deleteLocName">
+				    		</div> -->
 								<!-- <div class="form-group">
 								    <label for="exampleFormControlSelect1">Choose a study location</label>
 								    <select class="form-control" id="exampleFormControlSelect1">
@@ -98,7 +107,8 @@
 			  <a href="/home" class="w3-button w3-hover-teal " role="button" id="bottomButton">Home</a>
 			  <a href="/favoriteLocs" class="w3-button w3-hover-teal " role="button" id="bottomButton">Favorite</a>
 			  <a href="/studyGroups" class="w3-button w3-hover-teal " role="button" id="bottomButton">Study Groups</a>
-			  
+				<a href="/profile" class="w3-button w3-hover-teal " role="button" id="bottomButton">Profile</a>
+
 	</footer>
 
 	</body>
