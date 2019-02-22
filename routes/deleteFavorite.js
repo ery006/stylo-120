@@ -1,7 +1,7 @@
 var data = require("../favorites.json");
 
 exports.deleteFavorite = function(request, response) { 
-	// console.log(locations);
+	console.log(data);
 	var locName = request.query.deleteLocName;
 	var index = 0;
 	//console.log(locName);
@@ -10,6 +10,7 @@ exports.deleteFavorite = function(request, response) { 
 	//console.log(conceptName);
 
 	for(var i = 0; i < data.locs.length; i++) {
+		data.locs[i].name;
 		if(data.locs[i].name === locName) {
 			index = i;
 		}
@@ -18,6 +19,9 @@ exports.deleteFavorite = function(request, response) { 
 	//console.log("HI");
 	
 	delete data.locs[index];
+	data.locs[index] = {
+		
+	};
 
  //  data.locs.push( {
 	// 	"name": req.query.name,
