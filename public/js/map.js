@@ -99,7 +99,9 @@ function mySearch() {
 function initMap() {
 	$.getJSON( "locations.json", function( json ) {
     locs = json;
-});
+	});
+
+	console.log(locs);
 
 	// Create an array of alphabetical characters used to label the markers.
 	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
