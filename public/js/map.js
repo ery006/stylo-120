@@ -126,13 +126,13 @@ function initMap() {
 		var latlong = new google.maps.LatLng(lat, long);
 		var myCategory = locs.locations[i].category;
 		var myTitle = locs.locations[i].name;
-		var myIcon = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
+		var myIcon = "https://maps.google.com/mapfiles/ms/icons/red-dot.png";
 		//var infowindow = new google.maps.InfoWindow();
 		if(locs.locations[i].category == "favorite") {
-			myIcon = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+			myIcon = "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
 		}
 		else if(locs.locations[i].category == "study") {
-			myIcon = "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+			myIcon = "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
 		}
 		marker = new google.maps.Marker({
         	position: latlong,
