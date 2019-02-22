@@ -1,4 +1,4 @@
-var studyLocs = require('../locations.json');
+var studyLocs = require('../public/locations.json');
 
 exports.addLocation = function(request, response){
 

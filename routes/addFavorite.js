@@ -1,5 +1,5 @@
 var data = require("../favorites.json");
-var locations = require("../locations.json")
+var locations = require("../public/locations.json")
 
 exports.addFavorite = function(request, response) { 
 	//console.log(request.query);
