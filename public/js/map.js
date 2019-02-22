@@ -346,6 +346,7 @@ function initMap() {
     	});
 
     	if(locs.locations[i].category == "favorite") {
+    		//console.l
 			favMarkers.push(marker);
 		}
 		else if(locs.locations[i].category == "study") {
