@@ -13,6 +13,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<script src="/js/manage.js"></script>
 
 	</head>
 	<body class="w3-theme-l5">
@@ -63,13 +64,13 @@
 							<div>{{hours}}</div>
 							<div>{{address}}</div>
 							<div>{{seating}}</div>
-						<a class="w3-button w3-hover-teal" onclick="myFunction()">Delete</a>
-						<script>
+						<!-- <a class="w3-button w3-hover-teal" onclick="myFunction()">Delete</a> -->
+<!-- 						<script>
 						function myFunction() {
-						  var x = document.getElementById("mySelect");
-						  x.remove(2);
+						  //var x = document.getElementById("mySelect");
+						  //x.remove(1);
 						}
-						</script>
+						</script> -->
 						<br>
 					</div>
 					<br>
@@ -144,6 +145,37 @@
 								    </select>
 								</div> -->
 				    		<input type="submit" id="submitBtn" class="w3-button w3-hover-teal " value="Add Favorite"></input>
+							</form>
+							<br>
+							<br>
+						</div>
+						<button data-toggle="collapse" data-target="#demo" class="w3-button w3-hover-teal">-</button>
+						<br>
+						<div id="demo" class="collapse">
+							<form id="addFavorite" role="form" method="get" action="/deleteFavorite">
+				    		<div class="form-group">
+				      		<label for="name">Location</label>
+				      		<input type="text" class="form-control" id="city" placeholder="Name of location" name="deleteLocName">
+				    		</div>
+								<!-- <div class="form-group">
+								    <label for="exampleFormControlSelect1">Choose a study location</label>
+								    <select class="form-control" id="exampleFormControlSelect1">
+											<option>Select One</option>
+								      <option>Coffee Shop</option>
+								      <option>The Great Library</option>
+											<option>The Other Library</option>
+											<option>Coffe Villa</option>
+											<option>The Building of Success</option>
+											<option>The Heights</option>
+											<option>The Cliffs</option>
+											<option>Home Coffee</option>
+											<option>Cogs 120</option>
+											<option>The Tunnel Bakery</option>
+											<option>The New Place</option>
+											<option>The Computer Labs</option>
+								    </select>
+								</div> -->
+				    		<input type="submit" id="submitBtn" class="w3-button w3-hover-teal " value="Delete Favorite"></input>
 							</form>
 							<br>
 							<br>

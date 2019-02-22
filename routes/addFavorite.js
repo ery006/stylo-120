@@ -38,3 +38,5 @@ exports.addFavorite = function(request, response) { 
 
 	response.render('manage', data);
  }
+
+

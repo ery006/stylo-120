@@ -21,6 +21,7 @@ var studyGroups = require('./routes/studyGroups');
 var favoriteLocs = require('./routes/favoriteLocs');
 var addLocation = require('./routes/addLocation');
 var addFavorites = require('./routes/addFavorite');
+var deleteFavorites = require('./routes/deleteFavorite');
 var confirmation = require('./routes/confirmation');
 
 // Example route
@@ -65,6 +66,7 @@ app.get('/signUp', signUp.view);
 app.get('/studyGroups', studyGroups.view);
 app.get('/favoriteLocs', favoriteLocs.view);
 app.get('/addFavorite', addFavorites.addFavorite);
+app.get('/deleteFavorite', deleteFavorites.deleteFavorite);
 // app.get('/login', login.view);
 // Example route
 // app.get('/users', user.list);
