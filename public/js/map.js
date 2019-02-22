@@ -1,4 +1,203 @@
-var locs;
+var locs = {
+	"locations": [
+		{
+			"lat": "32.876616",
+			"long": "-117.231710",
+			"name": "Coffee Shop",
+			"description": "The Coffe Shop is a great area for people to come in and relax! The atmosphere is great for studying! It's nice and quiet allowing people to focus on their tasks! Also, their coffee is great too!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Address St. La Jolla, CA",
+			"seating": "15 Available seats.",
+			"category": "home",
+			"distance": "1",
+			"price": "2",
+			"wifi": "true",
+			"sound": "quiet",
+			"hour": "true",
+			"imageURL": "https://cdn.vox-cdn.com/thumbor/cgG1ql9CDeWB_T36lIiowxPUALo=/0x0:1080x1079/1200x800/filters:focal(454x454:626x626)/cdn.vox-cdn.com/uploads/chorus_image/image/61907683/42849956_570627830022158_7099804199528040122_n.0.jpg"			
+		},
+		{
+			"lat": "32.868518",
+			"long": "-117.239889",
+			"name": "The Great Library",
+			"description": "This library has a wide variety of books and textbooks for students! There are three floors and many tables for students to come and study! Some floors may be a little loud due to large groups.",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Library Way, San Diego, CA",
+			"seating": "40 Available seats.",
+			"category": "home",
+			"distance": "4",
+			"price": "6",
+			"wifi": "true",
+			"sound": "background",
+			"hour": "true",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"	
+		},
+		{
+			"lat": "32.875442",
+			"long": "-117.237017",
+			"name": "The Other Library",
+			"description": "This library is smaller compared to other libraries in the area, but is a great quiet place for students to come and study! Space is limited though!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Address St. La Jolla, CA",
+			"seating": "20 Available seats.",
+			"category": "home",
+			"distance": "9",
+			"price": "0",
+			"wifi": "true",
+			"sound": "background",
+			"hour": "false",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"				
+		},
+		{
+			"lat": "32.873855",
+			"long": "-117.240900",
+			"name": "Coffe Villa",
+			"description": "Coffe Villa serves great coffee which will help keep you awake! It is a small cafe with limited seats.",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Address St. La Jolla, CA",
+			"seating": "20 Available seats.",
+			"category": "home",
+			"distance": "3",
+			"price": "1",
+			"wifi": "false",
+			"sound": "loud",
+			"hour": "flase",
+			"imageURL": "https://images1.dallasobserver.com/imager/u/745xauto/10893224/communionneighborhoodcooperative_bethrankin_2153.jpg"				
+		},
+		{
+			"lat": "32.876616",
+			"long": "-117.241710",
+			"name": "The Building of Success",
+			"description": "A great place to study because of all the tables available to study! It can get a little loud because of its popularity, but it's still a great place!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Building St. La Jolla, CA",
+			"seating": "20 Available seats.",
+			"category": "favorite",
+			"distance": "5",
+			"price": "7",
+			"wifi": "true",
+			"sound": "loud",
+			"hour": "true",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"			
+		},
+		{
+			"lat": "32.873999",
+			"long": "-117.235622",
+			"name": "The Heights",
+			"description": "The Heights is a small coffee shop with a limited amount of seats. It is quiet and a great area to stay and study for a long amount of time.",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Heights St. La Jolla, CA",
+			"seating": "7 Available seats.",
+			"category": "favorite",
+			"distance": "2",
+			"price": "9",
+			"wifi": "true",
+			"sound": "quiet",
+			"hour": "false",
+			"imageURL": "https://coffeeshopstartups.com/wp-content/uploads/2016/05/how-to-open-a-coffee-shop-business-1024x682.jpg"	
+		},
+		{
+			"lat": "32.877531",
+			"long": "-117.231631",
+			"name": "The Cliffs",
+			"description": "The CLiffs is a bakery shop with great snacks and drinks! It is quiet and has enough tables for groups up to 5, but come early to get a table!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Cliffs St. La Jolla, CA",
+			"seating": "9 Available seats.",
+			"category": "favorite",
+			"distance": "4",
+			"price": "3",
+			"wifi": "true",
+			"sound": "quiet",
+			"hour": "false",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"				
+		},
+		{
+			"lat": "32.880883",
+			"long": "-117.237553",
+			"name": "Home Coffee",
+			"description": "Home Coffee is a medium sized cafe that brews coffee to reminds people of home. There are comfortable seats and plenty of tables for people to come and enjoy their coffee and study hard.",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Home St. La Jolla, CA",
+			"seating": "20 Available seats.",
+			"category": "favorite",
+			"distance": "8",
+			"price": "2",
+			"wifi": "false",
+			"sound": "background",
+			"hour": "true",
+			"imageURL": "https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2018/01/coffee-shop-business-growth.jpg"				
+		},
+		{
+			"lat": "32.874988",
+			"long": "-117.234678",
+			"name": "The Study Area",
+			"class": "Cogs 120",
+			"description": "This area is famous for being busy, but also having a lot of space for big groups of people. There will likely to a lot of noise, so be prepared to talk loudly if you are in a group!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Study St. La Jolla, CA",
+			"seating": "20 Available seats.",
+			"category": "study",
+			"distance": "4",
+			"price": "13",
+			"wifi": "true",
+			"sound": "loud",
+			"hour": "false",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"
+		},
+		{
+			"lat": "32.875457",
+			"long": "-117.238069",
+			"name": "The Tunnel Bakery",
+			"class": "Cse 170",
+			"description": "Come through to study CSE 170 with your fellow peers. This bakery is a great area for large groups of people!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Tunnel St. La Jolla, CA",
+			"seating": "14 Available seats.",
+			"category": "study",
+			"distance": "1",
+			"price": "10",
+			"wifi": "true",
+			"sound": "background",
+			"hour": "true",
+			"imageURL": "ttps://coffeeshopstartups.com/wp-content/uploads/2016/05/how-to-open-a-coffee-shop-business-1024x682.jpg"
+		},
+		{
+			"lat": "32.879205",
+			"long": "-117.236738",
+			"name": "The New Place",
+			"class": "Cogs 101a",
+			"description": "COGS 101a is hard, so come study with some other people in the class. Let's do well together!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 New St. La Jolla, CA",
+			"seating": "20 Available seats.",
+			"category": "study",
+			"distance": "7",
+			"price": "4",
+			"wifi": "true",
+			"sound": "background",
+			"hour": "false",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"
+		},
+		{
+			"lat": "32.870883",
+			"long": "-117.237553",
+			"name": "The Computer Labs",
+			"class": "Cse 8a",
+			"description": "Come study coding with us! We have a variety of experienced people so come through and lets learn together!",
+			"hours": "Hours: Mon-Sat 8am-10pm",
+			"address": "123 Labs St. La Jolla, CA",
+			"seating": "5 Available seats.",
+			"category": "study",
+			"distance": "6",
+			"price": "4",
+			"wifi": "true",
+			"sound": "background",
+			"hour": "false",
+			"imageURL": "https://www.c-ville.com/wp-content/uploads/2015/05/Library_StephenBarling-660x335.jpg"
+		}
+	]
+};
 var markers = [];
 var favMarkers = [];
 var studyMarkers = [];
@@ -97,11 +296,11 @@ function mySearch() {
 
 // Home screen map
 function initMap() {
-	$.getJSON( "locations.json", function( json ) {
-    locs = json;
-	});
+	// $.getJSON( "locations.json", function( json ) {
+ //    locs = json;
+	// });
 
-	console.log(locs);
+	//console.log(locs);
 
 	// Create an array of alphabetical characters used to label the markers.
 	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
