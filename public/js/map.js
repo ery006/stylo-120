@@ -3,9 +3,7 @@ var markers = [];
 var favMarkers = [];
 var studyMarkers = [];
 
-$.getJSON( "locations.json", function( json ) {
-    locs = json;
-});
+
 
 // Dialog functions
 $( function() {
@@ -99,6 +97,9 @@ function mySearch() {
 
 // Home screen map
 function initMap() {
+	$.getJSON( "locations.json", function( json ) {
+    locs = json;
+});
 
 	// Create an array of alphabetical characters used to label the markers.
 	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
