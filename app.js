@@ -19,8 +19,10 @@ var signUp = require('./routes/signUp');
 var manage = require('./routes/manage');
 var studyGroups = require('./routes/studyGroups');
 var favoriteLocs = require('./routes/favoriteLocs');
-
+var addLocation = require('./routes/addLocation');
 var addFavorites = require('./routes/addFavorite');
+var confirmation = require('./routes/confirmation');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -55,6 +57,8 @@ app.get('/', login.view);
 app.get('/home', home.view);
 app.get('/profile', profile.view);
 app.get('/add', add.view);
+app.get('/confirmation', confirmation.view);
+app.get('/addLocation', addLocation.addLocation);
 app.get('/account', account.view);
 app.get('/manage', manage.view);
 app.get('/signUp', signUp.view);
