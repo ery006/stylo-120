@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     {{> facebook}}
     <script src="/js/facebook.js"></script>
@@ -24,23 +26,36 @@
   <div class="container text-center">
     <h5> With Stylo, you can find your favorite places to study</h5>
   </div>
+<body class="w3-theme-l5">
 
-  <div class="container text-center">
-    <div class="form-group">
+  <header class="w3-bar w3-card w3-theme">
+      <h1 class="myHeader">Stylo</h1>
+    </header>
+<br>
 
-        <input type="email" class="myInput" id="exampleFormControlInput1" placeholder="Username">
+  <div class="w3-container text-center">
+      <p>
+      Welcome to Stylo, your app to find study locations based on your preferences!
+    </p>
+    <div class="w3-container" id="topItems">
+    <h3> Log In </h3>
+     
     </div>
-    <div class="form-group">
-        <input type="email" class="myInput" id="exampleFormControlInput1" placeholder="Password">
-  </div>
-
   <br>
     <p class="facebookLogin"><br/>
       <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
     </fb:login-button>
   </p>
+
+  <div class="middleItems"> 
+
+          <input type="email" class="myInput" id="exampleFormControlInput1" placeholder="Username">
+      </div>
+      <br/>
+      <div class="form-group">
+          <input type="email" class="myInput" id="exampleFormControlInput1" placeholder="Password">
+    </div>
   </div>
-<br>
 
   <div class="bottomStuff">
     <a href="/home" class="w3-button w3-hover-teal" role="button">Log In</a>
@@ -48,6 +63,12 @@
 <br>
 
     <a href="/signUp" class="w3-button w3-hover-teal">Sign Up</a>
+    <a class="w3-button w3-hover-teal " href="/signUp">Sign Up</a>
+    <br/>
+        <p class="facebookLogin"><br/>
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+  </p>
   </div>
 
 </body>

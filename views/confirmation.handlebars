@@ -27,38 +27,29 @@
 	<header class="w3-bar w3-card w3-theme">
 			  <h1 class="myHeader">Add New Location</h1>
 			</header>
-		<div class="container text-center">
-<!-- 		<h2> Add New Locations </h2> -->
 
-		<!-- Form -->
-		<form action="/addLocation">
-			<div class="form-group">
-			    <label for="exampleFormControlSelect1">Select One</label>
-			    <select class="form-control" id="exampleFormControlSelect1">
-			      <option>Add Study Location</option>
-			      <option>Add Study Group</option>
-			    </select>
-			</div>
-		  <div class="form-group">
-		    <label for="exampleFormControlInput1">Location Name</label>
-		    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="name">
-		  </div>
-			<div class="form-group">
-		    <label for="exampleFormControlInput2">Location Address</label>
-		    <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="123 Address St. La Jolla, CA" name="address">
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleFormControlTextarea1">Description</label>
-		    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Description, Class/Topic, Pricing, etc..." name="description"></textarea>
-		  </div>
-		  <input type="submit" id="submitBtn" class="w3-button w3-hover-teal" value="Add Favorite"></input>
-		  <!-- <div id="dialog" title="Form was submitted">
+		<div class="container text-center">
+		<h3>New Location</h3>
+			{{#each locations}}
+			{{#if @last}}
+					<div id="mySelect">
+						
+                			<p><h4>{{name}}</h4> </p>
+							<div>{{description}}</div>
+							<div>{{hours}}</div>
+							<div>{{address}}</div>
+							<div>{{seating}}</div>
+
+    					</div>
+					
+					{{/if}}
+	 			{{/each}}
+		<br/>
+		 <div>
 			  <p>Thank you for submitting a new location! Your new addition has been added! You can now go back and see any of the maps through the tabs at the bottom (Home, Favorites, Study Groups).</p>
-			</div>
-				<button id="opener" type="button" class="w3-button w3-hover-teal ">
-					Submit
-				</button> -->
-		</form>
+		</div>
+
+
 
 		</div>
 		<!-- Tabs -->

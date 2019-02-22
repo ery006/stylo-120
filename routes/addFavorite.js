@@ -2,7 +2,7 @@ var data = require("../favorites.json");
 var locations = require("../locations.json")
 
 exports.addFavorite = function(request, response) { 
-	console.log(request.query);
+	//console.log(request.query);
 	// console.log(locations);
 	var locName = request.query.locName;
 	var index = 0;
