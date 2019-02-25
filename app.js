@@ -23,6 +23,7 @@ var addLocation = require('./routes/addLocation');
 var addFavorites = require('./routes/addFavorite');
 var deleteFavorites = require('./routes/deleteFavorite');
 var confirmation = require('./routes/confirmation');
+var help = require('./routes/help');
 
 // Example route
 // var user = require('./routes/user');
@@ -58,6 +59,7 @@ app.get('/', login.view);
 app.get('/home', home.view);
 app.get('/profile', profile.view);
 app.get('/add', add.view);
+app.get('/help', help.view);
 app.get('/confirmation', confirmation.view);
 app.get('/addLocation', addLocation.addLocation);
 app.get('/account', account.view);

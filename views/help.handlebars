@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<title>Stylo</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="css/profile.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJdJ76C7tY7RfZpyaF3C5k4ysU_NkotzM"></script>
+		<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+	    </script>
+	    <script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js"></script>
+			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+						<script type="text/javascript" src="/js/account.js"></script>
+
+		</head>
+	<body class="w3-theme-l5">
+		<header class="w3-bar w3-card w3-theme">
+			<h1 class="myHeader">Help</h1>
+		</header>
+ 		<br>
+	<div class="container text-center">
+ 			<!-- Content -->
+			<!-- <div>
+				<ul class="list-group list-group-flush">
+
+				  <li class="list-group-item"><a href="/password" data-toggle="collapse" data-target="#demo">Change Password</a></li>
+					<div id="demo" class="collapse">
+						Lorem ipsum dolor text....
+					</div>
+
+				  <li class="list-group-item"><a href="/notifications">Notification Settings</a></li>
+				  <li class="list-group-item"><a href="/locationSetting">Location Settings</a></li>
+				  <li class="list-group-item"><a href="/privacy">Privacy & Safety</a></li>
+				</ul>
+				<br> -->
+
+
+<div class="panel-group" id="accordion">
+
+	<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        	Q: How do I filter the map?</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">
+				<p> Go to any of the following: home map, favorite map, or study groups map. From there, click on the button on the right side of the search bar (right next to the search button). Use the following elements from the pop-up to choose your preferences. Click submit and see the new filtered locations on the map! </p>
+		</div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        	Q: How do I see a description about the locations?</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+				<p> Go to any of the following: home map, favorite map, or study groups map. From there, click on any of the markers to see a description, image, rating, and hours of the specific location. </p>
+		</div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        	Q: How do I add a new study group / study location?</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+				<p> Go to any of the following: home map, favorite map, or study groups map. From there, look above the map and click on the plus (+) button. Follow the instructions on the new page and click submit to add a new study group or study location! </p>
+		</div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+        	Q: How do I change my username and password?</a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body">
+				<p>Look at the bottom navigation bar and click on the profile tab. Then proceed to click on "Account Settings" and go to the tab "Change Password". </p>
+		</div>
+    </div>
+  </div>
+</div>
+
+		<!-- Tabs -->
+		<footer class="w3-row w3-theme" id="bottomBar">
+			<!-- <div class="w3-row"> -->
+			  <a href="/home" class="w3-button w3-hover-teal " role="button" id="bottomButton">Home</a>
+			  <a href="/favoriteLocs" class="w3-button w3-hover-teal " role="button" id="bottomButton">Favorite</a>
+			  <a href="/studyGroups" class="w3-button w3-hover-teal " role="button" id="bottomButton">Study Groups</a>
+			  <!-- <button type="button" onclick="favoriteMap()" class="w3-button w3-hover-teal" id="bottomButton">Favorite</button> -->
+<!-- 			  <button type="button" onclick="studyGroupsMap()" class="w3-button w3-hover-teal " id="bottomButton">Study Groups</button> -->
+			  <a href="/profile" class="w3-button w3-hover-teal " role="button" id="bottomButton">Profile</a>
+			<!-- </div> -->
+		</footer>
+	</div>
+
+	</body>
+</html>
