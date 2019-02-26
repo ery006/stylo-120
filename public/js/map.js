@@ -7,7 +7,8 @@ var locs = {
 			"description": "The Coffe Shop is a great area for people to come in and relax! The atmosphere is great for studying! It's nice and quiet allowing people to focus on their tasks! Also, their coffee is great too!",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Address St. La Jolla, CA",
-			"seating": "15 Available seats.",
+			"available_seating": "15",
+			"total_seating": "20",
 			"category": "home",
 			"distance": "1",
 			"price": "2",
@@ -23,7 +24,8 @@ var locs = {
 			"description": "This library has a wide variety of books and textbooks for students! There are three floors and many tables for students to come and study! Some floors may be a little loud due to large groups.",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Library Way, San Diego, CA",
-			"seating": "40 Available seats.",
+			"available_seating": "40",
+			"total_seating": "50",
 			"category": "home",
 			"distance": "4",
 			"price": "6",
@@ -39,7 +41,8 @@ var locs = {
 			"description": "This library is smaller compared to other libraries in the area, but is a great quiet place for students to come and study! Space is limited though!",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Address St. La Jolla, CA",
-			"seating": "20 Available seats.",
+			"available_seating": "20",
+			"total_seating": "22",
 			"category": "home",
 			"distance": "9",
 			"price": "0",
@@ -55,7 +58,8 @@ var locs = {
 			"description": "Coffe Villa serves great coffee which will help keep you awake! It is a small cafe with limited seats.",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Address St. La Jolla, CA",
-			"seating": "20 Available seats.",
+			"available_seating": "5",
+			"total_seating": "20",
 			"category": "home",
 			"distance": "3",
 			"price": "1",
@@ -71,7 +75,8 @@ var locs = {
 			"description": "A great place to study because of all the tables available to study! It can get a little loud because of its popularity, but it's still a great place!",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Building St. La Jolla, CA",
-			"seating": "20 Available seats.",
+			"available_seating": "3",
+			"total_seating": "25",
 			"category": "favorite",
 			"distance": "5",
 			"price": "7",
@@ -87,7 +92,8 @@ var locs = {
 			"description": "The Heights is a small coffee shop with a limited amount of seats. It is quiet and a great area to stay and study for a long amount of time.",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Heights St. La Jolla, CA",
-			"seating": "7 Available seats.",
+			"available_seating": "20",
+			"total_seating": "20",
 			"category": "favorite",
 			"distance": "2",
 			"price": "9",
@@ -103,7 +109,8 @@ var locs = {
 			"description": "The CLiffs is a bakery shop with great snacks and drinks! It is quiet and has enough tables for groups up to 5, but come early to get a table!",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Cliffs St. La Jolla, CA",
-			"seating": "9 Available seats.",
+			"available_seating": "9",
+			"total_seating": "20",
 			"category": "favorite",
 			"distance": "4",
 			"price": "3",
@@ -119,7 +126,8 @@ var locs = {
 			"description": "Home Coffee is a medium sized cafe that brews coffee to reminds people of home. There are comfortable seats and plenty of tables for people to come and enjoy their coffee and study hard.",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Home St. La Jolla, CA",
-			"seating": "20 Available seats.",
+			"available_seating": "12",
+			"total_seating": "20",
 			"category": "favorite",
 			"distance": "8",
 			"price": "2",
@@ -136,7 +144,8 @@ var locs = {
 			"description": "This area is famous for being busy, but also having a lot of space for big groups of people. There will likely to a lot of noise, so be prepared to talk loudly if you are in a group!",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Study St. La Jolla, CA",
-			"seating": "20 Available seats.",
+			"available_seating": "9",
+			"total_seating": "20",
 			"category": "study",
 			"distance": "4",
 			"price": "13",
@@ -153,7 +162,8 @@ var locs = {
 			"description": "Come through to study CSE 170 with your fellow peers. This bakery is a great area for large groups of people!",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Tunnel St. La Jolla, CA",
-			"seating": "14 Available seats.",
+			"available_seating": "14",
+			"total_seating": "20",
 			"category": "study",
 			"distance": "1",
 			"price": "10",
@@ -170,7 +180,8 @@ var locs = {
 			"description": "COGS 101a is hard, so come study with some other people in the class. Let's do well together!",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 New St. La Jolla, CA",
-			"seating": "20 Available seats.",
+			"available_seating": "6",
+			"total_seating": "20",
 			"category": "study",
 			"distance": "7",
 			"price": "4",
@@ -187,7 +198,8 @@ var locs = {
 			"description": "Come study coding with us! We have a variety of experienced people so come through and lets learn together!",
 			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Labs St. La Jolla, CA",
-			"seating": "5 Available seats.",
+			"available_seating": "16",
+			"total_seating": "20",
 			"category": "study",
 			"distance": "6",
 			"price": "4",
@@ -328,13 +340,15 @@ function initMap() {
 		var latlong = new google.maps.LatLng(lat, long);
 		var myCategory = locs.locations[i].category;
 		var myTitle = locs.locations[i].name;
+		var available = parseFloat(locs.locations[i].available_seating);
+		var total = parseFloat(locs.locations[i].total_seating);
 		var myIcon = "https://maps.google.com/mapfiles/ms/icons/red-dot.png";
 		//var infowindow = new google.maps.InfoWindow();
-		if(locs.locations[i].category == "favorite") {
-			myIcon = "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-		}
-		else if(locs.locations[i].category == "study") {
+		if( (available / total) <= .3) {
 			myIcon = "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
+		}
+		else if( (available / total) <= .6) {
+			myIcon = "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
 		}
 		marker = new google.maps.Marker({
         	position: latlong,
@@ -374,7 +388,7 @@ function initMap() {
 	            '<div class=infoWindowOpen> Open </div>'+
 							'</div>' +
 							'<div>' +
-	            '<p>' + locs.locations[i].seating + '</p>' +
+	            '<p>' + locs.locations[i].avaiable_seating + ' Available seats.' + '</p>' +
 							'</div>' +
 							'<div> <img class="infoWindowImage" src=' +
 							locs.locations[i].imageURL + '>'
