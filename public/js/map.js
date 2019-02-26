@@ -503,6 +503,8 @@ function filterStudyMap() {
 		sound = "loud";
 	}
 
+	//console.log(studyMarkers);
+
 	for (var i = 0; i < studyMarkers.length; i++) {
         marker = studyMarkers[i];
         var curSound = locs.locations[i].sound;
