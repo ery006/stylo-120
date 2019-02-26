@@ -68,7 +68,11 @@
 
 .infoWindowImage {
 	height: 100px;
-	width: 100px;
+	width: 100%;
+}
+
+.infoWindowOpen {
+  color: green;
 }
 
 .mySlider {

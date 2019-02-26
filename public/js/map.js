@@ -5,7 +5,7 @@ var locs = {
 			"long": "-117.231710",
 			"name": "Coffee Shop",
 			"description": "The Coffe Shop is a great area for people to come in and relax! The atmosphere is great for studying! It's nice and quiet allowing people to focus on their tasks! Also, their coffee is great too!",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Address St. La Jolla, CA",
 			"seating": "15 Available seats.",
 			"category": "home",
@@ -21,7 +21,7 @@ var locs = {
 			"long": "-117.239889",
 			"name": "The Great Library",
 			"description": "This library has a wide variety of books and textbooks for students! There are three floors and many tables for students to come and study! Some floors may be a little loud due to large groups.",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Library Way, San Diego, CA",
 			"seating": "40 Available seats.",
 			"category": "home",
@@ -37,7 +37,7 @@ var locs = {
 			"long": "-117.237017",
 			"name": "The Other Library",
 			"description": "This library is smaller compared to other libraries in the area, but is a great quiet place for students to come and study! Space is limited though!",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Address St. La Jolla, CA",
 			"seating": "20 Available seats.",
 			"category": "home",
@@ -53,7 +53,7 @@ var locs = {
 			"long": "-117.240900",
 			"name": "Coffe Villa",
 			"description": "Coffe Villa serves great coffee which will help keep you awake! It is a small cafe with limited seats.",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Address St. La Jolla, CA",
 			"seating": "20 Available seats.",
 			"category": "home",
@@ -69,7 +69,7 @@ var locs = {
 			"long": "-117.241710",
 			"name": "The Building of Success",
 			"description": "A great place to study because of all the tables available to study! It can get a little loud because of its popularity, but it's still a great place!",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Building St. La Jolla, CA",
 			"seating": "20 Available seats.",
 			"category": "favorite",
@@ -85,7 +85,7 @@ var locs = {
 			"long": "-117.235622",
 			"name": "The Heights",
 			"description": "The Heights is a small coffee shop with a limited amount of seats. It is quiet and a great area to stay and study for a long amount of time.",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Heights St. La Jolla, CA",
 			"seating": "7 Available seats.",
 			"category": "favorite",
@@ -101,7 +101,7 @@ var locs = {
 			"long": "-117.231631",
 			"name": "The Cliffs",
 			"description": "The CLiffs is a bakery shop with great snacks and drinks! It is quiet and has enough tables for groups up to 5, but come early to get a table!",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Cliffs St. La Jolla, CA",
 			"seating": "9 Available seats.",
 			"category": "favorite",
@@ -117,7 +117,7 @@ var locs = {
 			"long": "-117.237553",
 			"name": "Home Coffee",
 			"description": "Home Coffee is a medium sized cafe that brews coffee to reminds people of home. There are comfortable seats and plenty of tables for people to come and enjoy their coffee and study hard.",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Home St. La Jolla, CA",
 			"seating": "20 Available seats.",
 			"category": "favorite",
@@ -134,7 +134,7 @@ var locs = {
 			"name": "The Study Area",
 			"class": "Cogs 120",
 			"description": "This area is famous for being busy, but also having a lot of space for big groups of people. There will likely to a lot of noise, so be prepared to talk loudly if you are in a group!",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Study St. La Jolla, CA",
 			"seating": "20 Available seats.",
 			"category": "study",
@@ -151,7 +151,7 @@ var locs = {
 			"name": "The Tunnel Bakery",
 			"class": "Cse 170",
 			"description": "Come through to study CSE 170 with your fellow peers. This bakery is a great area for large groups of people!",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Tunnel St. La Jolla, CA",
 			"seating": "14 Available seats.",
 			"category": "study",
@@ -168,7 +168,7 @@ var locs = {
 			"name": "The New Place",
 			"class": "Cogs 101a",
 			"description": "COGS 101a is hard, so come study with some other people in the class. Let's do well together!",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 New St. La Jolla, CA",
 			"seating": "20 Available seats.",
 			"category": "study",
@@ -185,7 +185,7 @@ var locs = {
 			"name": "The Computer Labs",
 			"class": "Cse 8a",
 			"description": "Come study coding with us! We have a variety of experienced people so come through and lets learn together!",
-			"hours": "Hours: Mon-Sat 8am-10pm",
+			"hours": "Mon-Sat 8am-10pm",
 			"address": "123 Labs St. La Jolla, CA",
 			"seating": "5 Available seats.",
 			"category": "study",
@@ -365,13 +365,13 @@ function initMap() {
 	            '<p>' + locs.locations[i].description + '</p>' +
 							'</div>' +
 							'<div>' +
-	            '<p>' + locs.locations[i].hours + '</p>' +
+	            '<p><b>Hours: </b>' + locs.locations[i].hours + '</p>' +
 							'</div>' +
 							'<div>' +
 	            '<p>' + locs.locations[i].address + '</p>' +
 							'</div>' +
 							'<div>' +
-	            'Open'+
+	            '<div class=infoWindowOpen> Open </div>'+
 							'</div>' +
 							'<div>' +
 	            '<p>' + locs.locations[i].seating + '</p>' +
