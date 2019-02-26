@@ -306,6 +306,234 @@ function mySearch() {
     }
 }
 
+function showMoreInfo() {
+	var x = document.getElementById("moreInfo");
+	var button = document.getElementById("toggleButton");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    button.innerHTML = "Less Info";
+
+  } else {
+    x.style.display = "none";
+    button.innerHTML = "More Details";
+  }
+}
+
+function pageAMap() {
+		// Create an array of alphabetical characters used to label the markers.
+	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+	var currentPosition = new google.maps.LatLng(32.877281, -117.234929);
+
+	var map = new google.maps.Map(document.getElementById('map'),  {
+	    zoom: 15,
+	    center: currentPosition,
+	});
+
+	var image = "https://img.icons8.com/color/26/000000/filled-star.png";
+	var currrentLoc = new google.maps.Marker({
+        	position: currentPosition,
+        	map: map,
+			icon: image
+    });
+
+    // Go get all locations
+    var infowindow = new google.maps.InfoWindow();
+    var marker, i;
+	for(i = 0; i < locs.locations.length; i++) {
+		var lat = parseFloat(locs.locations[i].lat);
+		var long = parseFloat(locs.locations[i].long);
+		var latlong = new google.maps.LatLng(lat, long);
+		var myCategory = locs.locations[i].category;
+		var myTitle = locs.locations[i].name;
+		var available = parseFloat(locs.locations[i].available_seating);
+		var total = parseFloat(locs.locations[i].total_seating);
+		var myIcon = "https://maps.google.com/mapfiles/ms/icons/red-dot.png";
+		//var infowindow = new google.maps.InfoWindow();
+		if( (available / total) <= .3) {
+			myIcon = "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
+		}
+		else if( (available / total) <= .6) {
+			myIcon = "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+		}
+		marker = new google.maps.Marker({
+        	position: latlong,
+        	map: map,
+        	category: myCategory,
+        	title: myTitle,
+        	icon: myIcon
+        	// label: labels[i]
+    	});
+
+    	if(locs.locations[i].category == "favorite") {
+    		//console.l
+			favMarkers.push(marker);
+		}
+		else if(locs.locations[i].category == "study") {
+			studyMarkers.push(marker);
+		}
+
+
+		var contentString = '<div id="content">'+
+	            '<div id="siteNotice">'+
+	            '</div>'+
+	            '<h4 id="firstHeading" class="firstHeading">' +
+	            locs.locations[i].name + 
+	            '</h4>'+
+	            '<div id="bodyContent">'+
+	            '<b>Description</b>' +
+	            '<p>' + locs.locations[i].description + '</p>' +
+							'</div>' +
+							'<div>' +
+	            '<p><b>Hours: </b>' + locs.locations[i].hours + '</p>' +
+							'</div>' +
+							'<div>' +
+	            '<p>' + locs.locations[i].address + '</p>' +
+							'</div>' +
+							'<div>' +
+	            '<div class=infoWindowOpen> Open </div>'+
+							'</div>' +
+							'<div>' +
+	            '<p>' + locs.locations[i].avaiable_seating + ' Available seats.' + '</p>' +
+							'</div>' +
+							'<div> <img class="infoWindowImage" src=' +
+							locs.locations[i].imageURL + '>'
+							+
+	            '<br/><a href="https://maps.google.com">' +
+	            'Directions</a>'
+							'</div>' +
+	            '</div>'
+							'</div>';
+
+		// infowindow = new google.maps.InfoWindow({
+		// content: contentString
+		// });
+		markers.push(marker);
+
+		marker.contentString = contentString;
+		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			return function() {
+			infowindow.setContent(this.contentString);
+			infowindow.open(map, this);
+			}
+		})(marker, i));
+		// marker.addListener('click', function() {
+		// 	infowindow.setContent(contentString);
+	 //      infowindow.open(map, marker);
+	 //    });
+
+	    
+
+	}
+}
+
+function pageBMap() {
+		// Create an array of alphabetical characters used to label the markers.
+	var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+	var currentPosition = new google.maps.LatLng(32.877281, -117.234929);
+
+	var map = new google.maps.Map(document.getElementById('map'),  {
+	    zoom: 15,
+	    center: currentPosition,
+	});
+
+	var image = "https://img.icons8.com/color/26/000000/filled-star.png";
+	var currrentLoc = new google.maps.Marker({
+        	position: currentPosition,
+        	map: map,
+			icon: image
+    });
+
+    // Go get all locations
+    var infowindow = new google.maps.InfoWindow();
+    var marker, i;
+	for(i = 0; i < locs.locations.length; i++) {
+		var lat = parseFloat(locs.locations[i].lat);
+		var long = parseFloat(locs.locations[i].long);
+		var latlong = new google.maps.LatLng(lat, long);
+		var myCategory = locs.locations[i].category;
+		var myTitle = locs.locations[i].name;
+		var available = parseFloat(locs.locations[i].available_seating);
+		var total = parseFloat(locs.locations[i].total_seating);
+		var myIcon = "https://maps.google.com/mapfiles/ms/icons/red-dot.png";
+		//var infowindow = new google.maps.InfoWindow();
+		if( (available / total) >= .6) {
+			myIcon = "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
+		}
+		else if( (available / total) >= .4) {
+			myIcon = "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+		}
+		marker = new google.maps.Marker({
+        	position: latlong,
+        	map: map,
+        	category: myCategory,
+        	title: myTitle,
+        	icon: myIcon
+        	// label: labels[i]
+    	});
+
+    	if(locs.locations[i].category == "favorite") {
+    		//console.l
+			favMarkers.push(marker);
+		}
+		else if(locs.locations[i].category == "study") {
+			studyMarkers.push(marker);
+		}
+
+
+		var contentString = '<div id="content">'+
+	            '<div id="siteNotice">'+
+	            '</div>'+
+	            '<h4 id="firstHeading" class="firstHeading">' +
+	            locs.locations[i].name + 
+	            '</h4>'+
+	            '<p>' + locs.locations[i].address + '</p>' +
+							'<div>' +
+	            '<p><b>Hours: </b>' + locs.locations[i].hours + '</p>' +
+							'</div>' +
+							'<div>' +
+	            '<div class=infoWindowOpen> Open </div>'+
+							'</div>' +
+							'<div>' +
+	            '<p>' + locs.locations[i].available_seating + ' Available seats.' + '</p>' +
+							'</div>' + 
+							'<button class="w3-button w3-hover-teal" id="toggleButton" onclick="showMoreInfo()">More Deatils</button>' +
+							'<div id="moreInfo" style="display:none;">' +
+				'<b>Description</b>' +
+	            '<p>' + locs.locations[i].description + '</p>' +
+	            '<img class="infoWindowImage" src=' +
+							locs.locations[i].imageURL + '>'
+							+
+			'</div>' +
+
+	            '<br/> <br/><a href="https://maps.google.com">' +
+	            'Directions</a>'
+							'</div>' +
+							'</div>';
+
+		// infowindow = new google.maps.InfoWindow({
+		// content: contentString
+		// });
+		markers.push(marker);
+
+		marker.contentString = contentString;
+		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			return function() {
+			infowindow.setContent(this.contentString);
+			infowindow.open(map, this);
+			}
+		})(marker, i));
+		// marker.addListener('click', function() {
+		// 	infowindow.setContent(contentString);
+	 //      infowindow.open(map, marker);
+	 //    });
+
+	    
+
+	}
+}
+
 // Home screen map
 function initMap() {
 	// $.getJSON( "locations.json", function( json ) {
