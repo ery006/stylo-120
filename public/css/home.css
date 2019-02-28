@@ -1,5 +1,6 @@
 .mySearchBar {
-	width: 60%;
+	width: 50%;
+  display:inline-block;
 }
 
 .myHeader {
@@ -46,9 +47,42 @@
   display:inline-block;
 }
 
+.extraLabel {
+  width: 25px;
+  display:inline-block;
+}
+
+.filterDiv {
+ /* width: 15px;*/
+  /*display:inline-block;*/
+}
+
 #bottomButton {
+  /*display: inline-block;*/
+  /*padding: 8px 8px !important;*/
+  /*width: 25%;
+  height: 50px;*/
+   margin-top: 5px;
+  /*border: 1px solid black;*/
+}
+
+.resizeButton2 {
+  /*padding: 1px 1px !important;*/
+  /*margin-top: 5px;*/
+  margin-right: 20px;
+  width: 22%;
+  height: 50px;
   display: inline-block;
-  padding: 8px 8px !important;
+  /*border: 1px solid black;*/
+}
+
+.resizeButton {
+  /*padding: 1px 1px !important;*/
+  margin-right: -5px;
+  width: 22%;
+   /*margin-top: 5px;*/
+  height: 50px;
+  display: inline-block;
   /*border: 1px solid black;*/
 }
 
