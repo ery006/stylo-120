@@ -62,9 +62,17 @@
 						<input type="checkbox" name="filter" class="dropOptions" id="hour"> 24 Hour<br>
 						<button type="button" onclick="filterMap()" class="btn btn-light" id="dropSubmit"> Submit </button>
 					</div>
-					<button type="button" class="w3-button w3-hover-teal" id="opener"><i class="fa fa-filter"></i></button>
 			  	</form>
 				</div>
+
+				<div class="w3-row" id="myRow">
+				<label>Help</label>
+				<div class="extraLabel"></div>
+				<label >Add</label>
+				<div class="extraLabel"></div>
+				<label for="opener">Filter</label>
+
+			</div>
 
 			<div class="w3-row" id="myRow">
 					<div id="dialogColor" title="Color Meanings">
@@ -77,6 +85,8 @@
 					<button id="openerColor" type="button" class="w3-button w3-hover-teal"> <i class="fa fa-question-circle"></i> </button>
 					<div class="extra"></div>
 				 	<a href="/add" id="addButton" class="w3-button w3-hover-teal" role="button"><i class="fa fa-plus"></i></a>
+				 	<div class="extra"></div>
+					<button type="button" class="w3-button w3-hover-teal" id="opener"><i class="fa fa-filter" name="opener"></i></button>
 			</div>
 			<div id="map"></div>
 		</div>
@@ -89,12 +99,20 @@
 
 		<footer class="w3-row w3-theme" id="bottomBar">
 			<!-- <div class="w3-row"> -->
+			<div class="resizeButton">
 			  <a href="/home" class="w3-button w3-hover-teal " role="button" id="bottomButton">Home</a>
+			  </div>
+			  <div class="resizeButton">
 			  <a href="/favoriteLocs" class="w3-button w3-hover-teal " role="button" id="bottomButton">Favorite</a>
+			  </div>
+			  <div class="resizeButton2">
 			  <a href="/studyGroups" class="w3-button w3-hover-teal " role="button" id="bottomButton">Study Groups</a>
+			  </div>
 			  <!-- <button type="button" onclick="favoriteMap()" class="w3-button w3-hover-teal" id="bottomButton">Favorite</button> -->
 <!-- 			  <button type="button" onclick="studyGroupsMap()" class="w3-button w3-hover-teal " id="bottomButton">Study Groups</button> -->
-			  <a href="/profile" class="w3-button w3-hover-teal " role="button" id="bottomButton">Profile</a>
+				<div class="resizeButton">
+			  		<a href="/profile" class="w3-button w3-hover-teal " role="button" id="bottomButton">Profile</a>
+			   </div>
 			<!-- </div> -->
 		</footer>
 
