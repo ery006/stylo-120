@@ -24,8 +24,8 @@ var addFavorites = require('./routes/addFavorite');
 var deleteFavorites = require('./routes/deleteFavorite');
 var confirmation = require('./routes/confirmation');
 var help = require('./routes/help');
-var pageA = require('./routes/pageA');
-var pageB = require('./routes/pageB');
+var pageA = require('./routes/page_A');
+var pageB = require('./routes/page_B');
 
 // Example route
 // var user = require('./routes/user');
@@ -62,8 +62,8 @@ app.get('/home', home.view);
 app.get('/profile', profile.view);
 app.get('/add', add.view);
 app.get('/help', help.view);
-app.get('/pageA', pageA.view);
-app.get('/pageB', pageB.view);
+app.get('/page_A', pageA.view);
+app.get('/page_B', pageB.view);
 app.get('/confirmation', confirmation.view);
 app.get('/addLocation', addLocation.addLocation);
 app.get('/account', account.view);
