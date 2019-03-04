@@ -224,7 +224,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$(".w3-button").click(function(){
+	$("#toggleButton").click(function(){
 		console.log("HI");
 		gtag('event', 'click', {
   		'event_category': 'moreDetails'
