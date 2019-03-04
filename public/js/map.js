@@ -230,6 +230,14 @@ function initializePage() {
   		'event_category': 'moreDetails'
 	});
 	});
+
+	$("#lessDetails").click(function(){
+		console.log("HI");
+		gtag('event', 'click', {
+  		'event_category': 'moreDetails'
+	});
+	});
+
 }
 
 // Dialog functions
@@ -431,7 +439,7 @@ function pageAMap() {
 			return function() {
 			infowindow.setContent(this.contentString);
 			infowindow.open(map, this);
-			initializePage();
+
 			}
 		})(marker, i));
 		// marker.addListener('click', function() {
@@ -538,6 +546,7 @@ function pageBMap() {
 			return function() {
 			infowindow.setContent(this.contentString);
 			infowindow.open(map, this);
+			initializePage();
 			}
 		})(marker, i));
 		// marker.addListener('click', function() {
