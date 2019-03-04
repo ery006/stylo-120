@@ -231,10 +231,17 @@ function initializePage() {
 	});
 	});
 
-	$("#lessDetails").click(function(){
+	$("#moreDetails").click(function(){
 		console.log("HI");
 		gtag('event', 'click', {
   		'event_category': 'moreDetails'
+	});
+	});
+
+	$("#lessDetails").click(function(){
+		console.log("HI");
+		gtag('event', 'click', {
+  		'event_category': 'lessDetails'
 	});
 	});
 
