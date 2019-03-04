@@ -232,16 +232,14 @@ function initializePage() {
 	});
 
 	$("#moreDetails").click(function(){
-		console.log("HI");
 		gtag('event', 'click', {
-  		'event_category': 'moreDetails'
+  		'event_category': 'lessDetails'
 	});
 	});
 
 	$("#lessDetails").click(function(){
-		console.log("HI");
 		gtag('event', 'click', {
-  		'event_category': 'lessDetails'
+  		'event_category': 'moreDetails'
 	});
 	});
 
