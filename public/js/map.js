@@ -528,7 +528,7 @@ function pageBMap() {
 			return function() {
 			infowindow.setContent(this.contentString);
 			infowindow.open(map, this);
-			initializePage();
+			
 			}
 		})(marker, i));
 		// marker.addListener('click', function() {
