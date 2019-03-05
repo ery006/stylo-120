@@ -28,16 +28,24 @@
 
 				{{#each locs}}
 					<div id="mySelect">
+						<div class="card">
+						  <div class="card-body">{{name}}</div>
+							<!-- <p><h4>{{name}}</h4> </p> -->
 							<p><h4>{{name}}</h4> </p>
 							<div>{{description}}</div>
 							<div>{{hours}}</div>
 							<div>{{address}}</div>
 							<div>{{seating}}</div>
+						</div>
 						<!-- <a class="w3-button w3-hover-teal" onclick="myFunction()">Delete</a> -->
+
 					<br>
 					</div>
 					<br>
 	 			{{/each}}
+
+							<!-- Add Option -->
+
 					<!-- Add option -->
 
 					<!-- <button data-toggle="collapse" data-target="#demo" class="w3-button w3-hover-teal">Edit</button>
@@ -67,10 +75,13 @@
 
 							<!-- Add Option 2 -->
 
+
 							<!-- Button to Open the Modal -->
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 								Edit
 							</button>
+							<br>
+							<br>
 
 							<!-- The Modal -->
 							<div class="modal" id="myModal">
