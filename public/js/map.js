@@ -170,7 +170,7 @@ var locs = {
 			"wifi": "true",
 			"sound": "background",
 			"hour": "true",
-			"imageURL": "ttps://coffeeshopstartups.com/wp-content/uploads/2016/05/how-to-open-a-coffee-shop-business-1024x682.jpg"
+			"imageURL": "https://coffeeshopstartups.com/wp-content/uploads/2016/05/how-to-open-a-coffee-shop-business-1024x682.jpg"
 		},
 		{
 			"lat": "32.879205",
@@ -215,6 +215,35 @@ var favMarkers = [];
 var studyMarkers = [];
 
 
+// Call this function when the page loads (the "ready" event)
+$(document).ready(function() {
+	initializePage();
+});
+
+/*
+ * Function that is called when the document is ready.
+ */
+function initializePage() {
+	$("#toggleButton").click(function(){
+		console.log("HI");
+		gtag('event', 'click', {
+  		'event_category': 'moreDetails'
+	});
+	});
+
+	$("#moreDetails").click(function(){
+		gtag('event', 'click', {
+  		'event_category': 'lessDetails'
+	});
+	});
+
+	$("#lessDetails").click(function(){
+		gtag('event', 'click', {
+  		'event_category': 'moreDetails'
+	});
+	});
+
+}
 
 // Dialog functions
 $( function() {
@@ -415,6 +444,7 @@ function pageAMap() {
 			return function() {
 			infowindow.setContent(this.contentString);
 			infowindow.open(map, this);
+
 			}
 		})(marker, i));
 		// marker.addListener('click', function() {
@@ -521,6 +551,7 @@ function pageBMap() {
 			return function() {
 			infowindow.setContent(this.contentString);
 			infowindow.open(map, this);
+			initializePage();
 			}
 		})(marker, i));
 		// marker.addListener('click', function() {
