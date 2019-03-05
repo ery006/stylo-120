@@ -215,35 +215,12 @@ var favMarkers = [];
 var studyMarkers = [];
 
 
-// Call this function when the page loads (the "ready" event)
-$(document).ready(function() {
-	initializePage();
+$(document).on('click', '#toggleButton', function(){
+  
+	gtag('event', 'click', {
+		'event_category': 'moreDetails'
+	});
 });
-
-/*
- * Function that is called when the document is ready.
- */
-function initializePage() {
-	$("#toggleButton").click(function(){
-		console.log("HI");
-		gtag('event', 'click', {
-  		'event_category': 'moreDetails'
-	});
-	});
-
-	$("#moreDetails").click(function(){
-		gtag('event', 'click', {
-  		'event_category': 'lessDetails'
-	});
-	});
-
-	$("#lessDetails").click(function(){
-		gtag('event', 'click', {
-  		'event_category': 'moreDetails'
-	});
-	});
-
-}
 
 // Dialog functions
 $( function() {
@@ -423,7 +400,7 @@ function pageAMap() {
 	            '<div class=infoWindowOpen> Open </div>'+
 							'</div>' +
 							'<div>' +
-	            '<p>' + locs.locations[i].avaiable_seating + ' Available seats.' + '</p>' +
+	            '<p>' + locs.locations[i].available_seating + ' Available seats.' + '</p>' +
 							'</div>' +
 							'<div> <img class="infoWindowImage" src=' +
 							locs.locations[i].imageURL + '>'
@@ -531,7 +508,7 @@ function pageBMap() {
 
 	            '<a href="https://maps.google.com">' +
 	            'Directions</a><br/><br/>' +
-	            '<button class="w3-button w3-hover-teal" id="toggleButton" onclick="showMoreInfo()">More Deatils</button>' +
+	            '<button class="w3-button w3-hover-teal" id="toggleButton" onclick="showMoreInfo()">More Details</button>' +
 							'<div id="moreInfo" style="display:none;">' +
 				'<b>Description</b>' +
 	            '<p>' + locs.locations[i].description + '</p>' +
@@ -646,7 +623,7 @@ function initMap() {
 	            '<div class=infoWindowOpen> Open </div>'+
 							'</div>' +
 							'<div>' +
-	            '<p>' + locs.locations[i].avaiable_seating + ' Available seats.' + '</p>' +
+	            '<p>' + locs.locations[i].available_seating + ' Available seats.' + '</p>' +
 							'</div>' +
 							'<div> <img class="infoWindowImage" src=' +
 							locs.locations[i].imageURL + '>'
