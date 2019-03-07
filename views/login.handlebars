@@ -15,47 +15,51 @@
     <script src="/js/facebook.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 
-<body>
+
 <body class="w3-theme-l5">
 
   <header class="w3-bar w3-card w3-theme">
-      <h1 class="myHeader">Stylo</h1>
-    </header>
-<br>
-
-  <div class="w3-container text-center">
-      <p>
-      Welcome to Stylo, your app to find study locations based on your preferences!
-    </p>
-    <div class="w3-container" id="topItems">
-    <h3> Log In </h3>
-     
-    </div>
+    <h1 class="myHeader">Stylo</h1>
+  </header>
   <br>
 
-  <div class="middleItems"> 
+  <div class="w3-container text-center">
 
-          <input type="email" class="myInput" id="exampleFormControlInput1" placeholder="Username">
-      </div>
-      <br/>
-      <div class="form-group">
-         <input type="email" class="myInput" id="exampleFormControlInput1" placeholder="Password">
-      </div>
-  </div>
+    <p>
+      Welcome to Stylo, your app to find study locations based on your preferences!
+    </p>
 
-  <div class="bottomStuff">
-    <a href="/home" class="w3-button w3-hover-teal" role="button">Log In</a>
+    <div class="w3-container" id="topItems">
+      <h3> Log In </h3>
+    </div>
 
-<br>
+    <br>
 
-    <a class="w3-button w3-hover-teal " href="/signUp">Sign Up</a>
-    <br/>
-        <p class="facebookLogin"><br/>
-      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-    </fb:login-button>
-  </p>
+    <div class="middleItems"> 
+      <input type="email" class="myInput" id="exampleFormControlInput1" placeholder="Username">
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <input type="email" class="myInput" id="exampleFormControlInput1" placeholder="Password">
+    </div>
+
+    <div class="bottomStuff">
+      <a href="/home" class="w3-button w3-hover-teal" role="button">Log In</a>
+      <br>
+      <a class="w3-button w3-hover-teal " href="/signUp">Sign Up</a>
+      <br>
+       <!-- <a class="w3-panel w3-round-xxlarge w3-teal" href="/signUp">Sign Up</a> -->
+      <p class="facebookLogin">
+        <br/>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+      </p>
+    </div>
   </div>
 
 </body>
