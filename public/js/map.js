@@ -505,14 +505,15 @@ function pageBMap() {
 							'<div>' +
 	            '<p>' + locs.locations[i].available_seating + ' Available seats.' + '</p>' +
 							'</div>' + 
+							'<a id="directions" href="https://maps.google.com">' +
+	            'Directions</a><br/><br/>' +
 	            '<button class="w3-button w3-hover-teal" id="toggleButton" onclick="showMoreInfo()">More Details</button>' +
 							'<div id="moreInfo" style="display:none;">' +
 				'<b>Description</b>' +
 	            '<p>' + locs.locations[i].description + '</p>' +
 	            '<img class="infoWindowImage" src=' +
 							locs.locations[i].imageURL + '>' +
-							'<a id="directions" href="https://maps.google.com">' +
-	            'Directions</a><br/><br/>' +
+							
 							
 							'</div>' +
 							'</div>';
@@ -618,14 +619,15 @@ function initMap() {
 							'<div>' +
 	            '<p>' + locs.locations[i].available_seating + ' Available seats.' + '</p>' +
 							'</div>' + 
+							'<a id="directions" href="https://maps.google.com">' +
+	            'Directions</a><br/><br/>' +
 	            '<button class="w3-button w3-hover-teal" id="toggleButton" onclick="showMoreInfo()">More Details</button>' +
 							'<div id="moreInfo" style="display:none;">' +
 				'<b>Description</b>' +
 	            '<p>' + locs.locations[i].description + '</p>' +
 	            '<img class="infoWindowImage" src=' +
 							locs.locations[i].imageURL + '>' +
-							'<a id="directions" href="https://maps.google.com">' +
-	            'Directions</a><br/><br/>' +
+							
 							
 							'</div>' +
 							'</div>';
