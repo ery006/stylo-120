@@ -215,10 +215,10 @@ var favMarkers = [];
 var studyMarkers = [];
 
 
-$(document).on('click', '#toggleButton', function(){
+$(document).on('click', '#directions', function(){
   
 	gtag('event', 'click', {
-		'event_category': 'moreDetails'
+		'event_category': 'directions'
 	});
 });
 
@@ -405,8 +405,8 @@ function pageAMap() {
 							'<div> <img class="infoWindowImage" src=' +
 							locs.locations[i].imageURL + '>'
 							+
-	            '<br/><a href="https://maps.google.com">' +
-	            'Directions</a>'
+	            '<br/><a id="directions" href="https://maps.google.com">' +
+	            'Directions</a><br/><br/>' +
 							'</div>' +
 	            '</div>'
 							'</div>';
@@ -505,15 +505,14 @@ function pageBMap() {
 							'<div>' +
 	            '<p>' + locs.locations[i].available_seating + ' Available seats.' + '</p>' +
 							'</div>' + 
-
-	            '<a href="https://maps.google.com">' +
-	            'Directions</a><br/><br/>' +
 	            '<button class="w3-button w3-hover-teal" id="toggleButton" onclick="showMoreInfo()">More Details</button>' +
 							'<div id="moreInfo" style="display:none;">' +
 				'<b>Description</b>' +
 	            '<p>' + locs.locations[i].description + '</p>' +
 	            '<img class="infoWindowImage" src=' +
-							locs.locations[i].imageURL + '>'
+							locs.locations[i].imageURL + '>' +
+							'<a id="directions" href="https://maps.google.com">' +
+	            'Directions</a><br/><br/>' +
 							
 							'</div>' +
 							'</div>';
