@@ -108,7 +108,9 @@
 
 													<select class="form-control" placeholder="Name of location" name="deleteLocName">
 														{{#each locs}}
+														{{#if name}}
 														<option>{{name}}</option>
+														{{/if}}
 											 			{{/each}}
 													</select>
 
