@@ -27,6 +27,7 @@
 		<div class="list-group">
 
 				{{#each locs}}
+					{{#if name}}
 					<div id="mySelect">
 						<div class="card">
 
@@ -43,6 +44,7 @@
 					<br>
 					</div>
 					<br>
+					{{/if}}
 	 			{{/each}}
 
 							<!-- Add Option -->
@@ -102,7 +104,14 @@
 											<form id="deleteFavorite" role="form" method="get" action="/deleteFavorite">
 								    		<div class="form-group">
 								      		<label for="name">Location</label>
-								      		<input type="text" class="form-control" id="city" placeholder="Name of location" name="deleteLocName">
+								      		<!-- <input type="text" class="form-control" id="city" placeholder="Name of location" name="deleteLocName"> -->
+
+													<select class="form-control" placeholder="Name of location" name="deleteLocName">
+														{{#each locs}}
+														<option>{{name}}</option>
+											 			{{/each}}
+													</select>
+
 								    		</div>
 												<br>
 								    		<input type="submit" id="submitBtn" class="w3-button w3-hover-teal " value="Delete Favorite"></input>
