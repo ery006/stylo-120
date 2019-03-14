@@ -1,4 +1,4 @@
-Welcome to Stylo!
+Welcome to StudyPoint!
 ====
 
 Project Description
