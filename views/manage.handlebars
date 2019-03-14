@@ -27,6 +27,7 @@
 		<div class="list-group">
 
 				{{#each locs}}
+					{{#if name}}
 					<div id="mySelect">
 						<div class="card">
 
@@ -43,6 +44,7 @@
 					<br>
 					</div>
 					<br>
+					{{/if}}
 	 			{{/each}}
 
 							<!-- Add Option -->
@@ -94,17 +96,42 @@
 											<form id="addFavorite" role="form" method="get" action="/addFavorite">
 								    		<div class="form-group">
 								      		<label for="name">Location</label>
-								      		<input type="text" class="form-control" id="city" placeholder="Name of location" name="locName">
+								      		<!-- <input type="text" class="form-control" id="city" placeholder="Name of location" name="locName"> -->
+													<select class="form-control" laceholder="Name of location" name="locName">
+														<option>Coffee Shop</option>
+														<option>The Great Library</option>
+														<option>The Other Library</option>
+														<option>Coffe Villa</option>
+														<option>The Building of Success</option>
+														<option>The Heights</option>
+														<option>The Cliffs</option>
+														<option>Home Coffee</option>
+														<option>The Study Area</option>
+														<option>The Tunnel Bakery</option>
+														<option>The New Place </option>
+														<option>The Computer Labs</option>
 								    		</div>
 								    		<input type="submit" id="submitBtn" class="w3-button w3-hover-teal " value="Add Favorite"></input>
 											</form>
 
 											<form id="deleteFavorite" role="form" method="get" action="/deleteFavorite">
 								    		<div class="form-group">
-								      		<label for="name">Location</label>
-								      		<input type="text" class="form-control" id="city" placeholder="Name of location" name="deleteLocName">
-								    		</div>
+
+												<p>_________________________________________________</p>
 												<br>
+
+								      		<label for="name">Location</label>
+								      		<!-- <input type="text" class="form-control" id="city" placeholder="Name of location" name="deleteLocName"> -->
+
+													<select class="form-control" placeholder="Name of location" name="deleteLocName">
+														{{#each locs}}
+														{{#if name}}
+														<option>{{name}}</option>
+														{{/if}}
+											 			{{/each}}
+													</select>
+
+								    		</div>
 								    		<input type="submit" id="submitBtn" class="w3-button w3-hover-teal " value="Delete Favorite"></input>
 											</form>
 
