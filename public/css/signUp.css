@@ -3,8 +3,44 @@
 
 
 }
+#topItems {
+	margin-top: 50px;
+}
+
+.middleItems {
+	margin-top: 30px;
+	text-align: center;
+}
 
 .bottomStuff {
-	margin-top: 100px;
+	margin-top: 80px;
 	text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  height: 100vh;
+}
+#login {
+  color: #617D8A;
+}
+
+a {
+  color:black!important;
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 60px;
+  max-width: 600px;
+  height: 430px;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+/*  position: absolute;
+*/}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 30px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
 }
