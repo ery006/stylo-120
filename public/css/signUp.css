@@ -33,13 +33,13 @@ a {
 #login .container #login-row #login-column #login-box {
   margin-top: 60px;
   max-width: 600px;
-  height: 430px;
+  height: 500px;
   border: 1px solid #9C9C9C;
   background-color: #EAEAEA;
 /*  position: absolute;
 */}
 #login .container #login-row #login-column #login-box #login-form {
-  padding: 30px;
+  padding: 20px;
 }
 #login .container #login-row #login-column #login-box #login-form #register-link {
   margin-top: -85px;
